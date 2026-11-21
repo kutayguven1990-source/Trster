@@ -457,5 +457,9 @@
     }
   });
   window.addEventListener("pagehide", pauseOnLeave);
+  // dvh desteklemeyen eski tarayıcılar için görünür yükseklik
+  const setH = () => document.documentElement.style.setProperty("--app-h", window.innerHeight + "px");
+  if (!CSS.supports("height", "100dvh")) { setH(); window.addEventListener("resize", setH); }
+
   init();
 })();
