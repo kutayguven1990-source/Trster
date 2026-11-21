@@ -84,34 +84,55 @@ def draw_front(c, x, y, s):
 RING_COLORS = ["#2EC4F1", "#FFD23F", "#FF7A2E", "#B14AED", "#FF2E88", "#FFD23F", "#2EC4F1", "#FF2E88"]
 BASE_URL = "https://oyun.uxhocam.com"
 
+QR_STYLE = "inverted"   # "inverted": siyah zemin üstüne beyaz QR (orijinal gibi) | "boxed": beyaz kutuda siyah QR
+QR_MM = 34
+
 def draw_back(c, x, y, s, idx):
     c.setFillColor(Color(0.05, 0.05, 0.07))
     c.rect(x, y, CARD, CARD, stroke=0, fill=1)
     cx, cy = x + CARD / 2, y + CARD / 2
+    size = QR_MM * mm
+    boxed = QR_STYLE == "boxed"
+    pad = 2.0 * mm if boxed else 0
+    # halkalar QR'ın köşesinin + sessiz alanın dışında başlar
+    r0 = (size / 2 + pad) * 1.4142 + (1.5 * mm if boxed else 2.2 * mm)
     c.saveState()
     p = c.beginPath(); p.rect(x, y, CARD, CARD); c.clipPath(p, stroke=0)
     c.setLineCap(1)
-    for i, col in enumerate(RING_COLORS):
-        r = 21.5 * mm + i * 1.45 * mm
+    i = 0
+    while True:
+        r = r0 + i * (1.05 * mm if boxed else 1.35 * mm)
+        if r > CARD / 2 - 0.8 * mm: break
+        col = RING_COLORS[i % len(RING_COLORS)]
         start = (idx * 47 + i * 83) % 360
         extent = 200 + (i * 37 + idx * 13) % 130
         c.setStrokeColor(Color(*hex2rgb(col)))
-        c.setLineWidth(0.55 * mm)
+        c.setLineWidth(0.5 * mm)
         c.arc(cx - r, cy - r, cx + r, cy + r, start, extent)
+        i += 1
     c.restoreState()
-    # QR: white modules on black, like the original deck
     url = f"{BASE_URL}/?t={s['spotify_id']}"
-    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_Q, border=0)
+    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=0)
     qr.add_data(url); qr.make(fit=True)
     m = qr.get_matrix(); n = len(m)
-    size = 27 * mm
     cell = size / n
-    c.setFillColor(white)
     ox, oy = cx - size / 2, cy + size / 2
+    if boxed:
+        c.setFillColor(white)
+        c.roundRect(ox - pad, oy - size - pad, size + 2 * pad, size + 2 * pad, 1.6 * mm, stroke=0, fill=1)
+        c.setFillColor(black)
+    else:
+        c.setFillColor(white)
+    # her satırdaki bitişik kareleri tek dikdörtgen olarak çiz (baskıda ince boşluk kalmasın)
     for r, row in enumerate(m):
-        for col, v in enumerate(row):
-            if v:
-                c.rect(ox + col * cell, oy - (r + 1) * cell, cell + 0.01, cell + 0.01, stroke=0, fill=1)
+        col = 0
+        while col < n:
+            if row[col]:
+                start = col
+                while col < n and row[col]: col += 1
+                c.rect(ox + start * cell, oy - (r + 1) * cell - 0.02, (col - start) * cell, cell + 0.04, stroke=0, fill=1)
+            else:
+                col += 1
 
 def cut_marks(c):
     c.setStrokeColor(Color(0.6, 0.6, 0.6)); c.setLineWidth(0.3)
@@ -125,8 +146,9 @@ def cut_marks(c):
         c.line(MX - L - 1 * mm, Y, MX - 1 * mm, Y)
         c.line(PW - MX + 1 * mm, Y, PW - MX + L + 1 * mm, Y)
 
-def main(src, out, base=None):
-    global BASE_URL
+def main(src, out, base=None, style=None):
+    global BASE_URL, QR_STYLE
+    if style: QR_STYLE = style
     if base: BASE_URL = base.rstrip("/")
     songs = list(csv.DictReader(open(src, encoding="utf-8")))
     c = canvas.Canvas(out, pagesize=A4)
@@ -146,4 +168,4 @@ def main(src, out, base=None):
     print(f"{len(songs)} kart, {math.ceil(len(songs)/per)*2} sayfa -> {out}")
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:5])
