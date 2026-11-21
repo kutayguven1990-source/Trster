@@ -63,7 +63,8 @@ def draw_front(c, x, y, s):
     p = c.beginPath(); p.rect(x, y, CARD, CARD); c.clipPath(p, stroke=0)
     c.linearGradient(x, y + CARD, x, y, (top, bot), extend=True)
     c.restoreState()
-    ink = Color(0.08, 0.08, 0.1)
+    lum = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]
+    ink = Color(1, 1, 1) if lum < 0.42 else Color(0.08, 0.08, 0.1)
     c.setFillColor(ink)
     cx, w = x + CARD / 2, CARD - 10 * mm
     # artist (top)
@@ -91,7 +92,7 @@ def draw_back(c, x, y, s, idx):
     p = c.beginPath(); p.rect(x, y, CARD, CARD); c.clipPath(p, stroke=0)
     c.setLineCap(1)
     for i, col in enumerate(RING_COLORS):
-        r = 19 * mm + i * 1.6 * mm
+        r = 21.5 * mm + i * 1.45 * mm
         start = (idx * 47 + i * 83) % 360
         extent = 200 + (i * 37 + idx * 13) % 130
         c.setStrokeColor(Color(*hex2rgb(col)))
@@ -100,10 +101,10 @@ def draw_back(c, x, y, s, idx):
     c.restoreState()
     # QR: white modules on black, like the original deck
     url = f"{BASE_URL}/?t={s['spotify_id']}"
-    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=0)
+    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_Q, border=0)
     qr.add_data(url); qr.make(fit=True)
     m = qr.get_matrix(); n = len(m)
-    size = 24 * mm
+    size = 27 * mm
     cell = size / n
     c.setFillColor(white)
     ox, oy = cx - size / 2, cy + size / 2

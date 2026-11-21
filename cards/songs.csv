@@ -1,6 +1,301 @@
-artist,title,year,spotify_id
-Barış Manço,Dağlar Dağlar,1970,3EXO6y0bM6VZIKN0D720Ry
-Sezen Aksu,Hadi Bakalım,1991,51xYVRNDNAINQNHnRXITTx
-Tarkan,Şımarık,1997,6vEL7E8TGzrxuxbrgdlkLL
-maNga,Bir Kadın Çizeceksin,2004,397A58sUsAVNZlvriDmfl9
-Mert Demir & Mabel Matiz,Antidepresan,2022,4OH5Cd8ZOI1eSgJSC9PYmU
+artist,title,year,spotify_id,kaynak
+Erol Büyükburç,Ağlarım,1966,79YMC3bFJsHSfv3kRFpIs0,Spotify (orijinal 45'lik)
+Barış Manço,Kol Düğmeleri,1967,53XpYnPMm9sDql7MDj97yJ,Kaynakla doğrulandı
+Erkin Koray,Kızları da Alın Askere,1967,6pVmIqB2dYXfnYoeVls8A1,Kaynakla doğrulandı
+Cem Karaca,Resimdeki Gözyaşları,1968,1FWtprHStw6VvFqFXDmLT9,Kontrol edin
+Erol Büyükburç,Sus Sus Sus,1968,4DgLmEzcjdkUU8yDpRka7o,Spotify (orijinal 45'lik)
+Barış Manço,Ağlama Değmez Hayat,1969,4D7CCThyTeNSH2ERjz427S,Kaynakla doğrulandı
+Ajda Pekkan,Sensiz Yıllarda,1970,2qhpl7tILS0EoGsQGPKR6M,Kaynakla doğrulandı
+Barış Manço,Dağlar Dağlar,1970,7iDB2RmJfPGIrgN42PBDLw,Kaynakla doğrulandı
+Cem Karaca,Dadaloğlu,1970,41yVVgk7YftX6gQkl6QM8V,Kaynakla doğrulandı
+Gönül Turgut,Sarhoş,1970,7aKxibnLCUfg95DpvRzNWA,Spotify (orijinal 45'lik)
+Orhan Gencebay,Bir Teselli Ver,1971,6QCRMujmf6JzxeOSSkhbry,Albüm yılı
+Selda Bağcan,Yalan Dünya,1971,2BTJHPI8SCdXGf9QoPeSbd,Spotify (orijinal 45'lik)
+Selda Bağcan,Tatlı Dillim,1971,64YPrxOZPvJaVoKsVwK1R4,Spotify (orijinal 45'lik)
+Ayten Alpman,Bir Başkadır Benim Memleketim,1972,5aMamSujiQaB2YHHLT6nnu,Kontrol edin
+Ajda Pekkan,Kimler Geldi Kimler Geçti,1973,2pJi3QHIg0nrRyWfI3mJqM,Kaynakla doğrulandı
+Ajda Pekkan,Tanrı Misafiri,1973,4QTl5IR0LaI8EgyLZCwTpe,Kaynakla doğrulandı
+Ajda Pekkan,Palavra Palavra,1973,70BvZcLULViwenytMNAItP,Kaynakla doğrulandı
+Ayla Algan,Anlasana,1973,17rJirycz0Sa7TNvmY6VnJ,Spotify (orijinal 45'lik)
+Barış Manço,Lambaya Püf De,1973,47Ar6XLLUq5BtMn06NihJo,Kaynakla doğrulandı
+Barış Manço,Gönül Dağı,1973,1i11YMwhoTIIlX6H1of5x9,Kaynakla doğrulandı
+Semiramis Pekkan,Olmaz Bu İş Olamaz,1973,3S7VCuq7pxnmr8S3UmDsQn,Spotify (orijinal 45'lik)
+Tanju Okan,Kadınım,1973,3pSXNxKO7b5iPJEJHszkLf,Kontrol edin
+Ajda Pekkan,Sana Neler Edeceğim,1974,4ViJpCfojsF6yncsDtXGFW,Kaynakla doğrulandı
+Barış Manço,Nazar Eyle,1974,6fT8LXtNA1JxpqifsNAoLx,Kaynakla doğrulandı
+Bülent Ortaçgil,Benimle Oynar mısın,1974,69QnkvrvdrIf81NhNPF6Ca,Albüm yılı
+Edip Akbayram,Aldırma Gönül,1974,6oRdeY9FOgaaf3tGpWSGRR,Kontrol edin
+Erkin Koray,Seni Her Gördüğümde,1974,5MAv1RGwsagnfxgzB1nYqz,Spotify (orijinal 45'lik)
+Erkin Koray,Fesuphanallah,1974,6730FVE2mSVXMbjzrSPuJM,Spotify (orijinal 45'lik)
+Gönül Yazar,Bir Gece Ansızın Gelebilirim,1974,6UpUUXRWpay996IKCdajmF,Spotify (orijinal 45'lik)
+Neşe Karaböcek,Kulakların Çınlasın,1974,2JPq57xN0eXFGknRrQxfoc,Spotify (orijinal 45'lik)
+Ajda Pekkan,Hoşgör Sen,1975,482pYhVH8RoC9nSKvTPa8C,Kaynakla doğrulandı
+Ayten Alpman,Ben Böyleyim,1975,4PdRmauZ4AF8HJiwpMVaXT,Spotify (orijinal 45'lik)
+Barış Manço,Ben Bilirim,1975,48VLMQSr6dCa2Mhi7nEstw,Kaynakla doğrulandı
+Cem Karaca,Tamirci Çırağı,1975,46X0rddXGD4C5CJOBmHQqD,Albüm yılı
+Güzin ile Baha,Gençlik Başımda Duman,1975,5Ox8yqAfQvNwaDoGlkU2al,Spotify (orijinal 45'lik)
+Orhan Gencebay,Batsın Bu Dünya,1975,4P9ZJZERMOt0CkMIy1HkmW,Albüm yılı
+Semiha Yankı,Seninle Bir Dakika,1975,371nNwFetX7GVB7Po7Z1nu,Albüm yılı
+Erkin Koray,Öyle Bir Geçer,1976,0YED4pCW0UsmwAmdSebTUQ,Kontrol edin
+Gökben,Aşk Dediğin Laftır,1976,0OhYmvzNF3dVdNp3xPBAOv,Spotify (orijinal 45'lik)
+Orhan Gencebay,Hatasız Kul Olmaz,1976,4fQHH8HlNoPBxRi5vorTIf,Spotify çıkış tarihi
+Selda Bağcan,Yaz Gazeteci Yaz,1976,0FA1jw000DERDofpyOoTot,Kontrol edin
+Seyyal Taner,Son Verdim Kalbimin İşine,1976,1o7GNDGGssOGUEHqwUo9uk,Spotify (orijinal 45'lik)
+Sezen Aksu,Olmaz Olsun,1976,7cBrFAIZjrEExD0Y4AxpWT,Kaynakla doğrulandı
+Tanju Okan,Deli Gibi Sevdim,1976,0dlENlYyl8Ji0QZjNgFFQm,Spotify (orijinal 45'lik)
+Nilüfer,Kim Arar Seni,1977,26XF1yu245TBBL08UwMPgF,Spotify (orijinal 45'lik)
+Nükhet Duru,Ben Sana Vurgunum,1977,14GcLsc9WELDLqxXQSiGkE,Kontrol edin
+Sezen Aksu,Kusura Bakma,1977,4UqZRNx9idkEeO9Nj94ath,Spotify (orijinal 45'lik)
+Ajda Pekkan,Ya Sonra,1978,5isNo45nZeye2BcvbR6D4q,Kaynakla doğrulandı
+Gülden Karaböcek,Dilek Taşı,1978,2R1liFqvBLEYVqtx8RfXim,Spotify (orijinal 45'lik)
+Sezen Aksu,Kaç Yıl Geçti Aradan,1978,3NyqgX4Oy8p4SljMMsjXUO,Spotify (orijinal 45'lik)
+Ajda Pekkan,Petrol,1980,5Cc1WChf2HPs5f5U0njCFD,Kaynakla doğrulandı
+Barış Manço,Gülpembe,1981,2mKX3nnLDmWVSp1aAkuDGb,Kaynakla doğrulandı
+Barış Manço,Hal Hal,1981,0lrfWTxWwdZWWtJsXXL31z,Kaynakla doğrulandı
+Barış Manço,Arkadaşım Eşşek,1981,0a3UdqBwx0tGNQLHZF427N,Kaynakla doğrulandı
+Barış Manço,Alla Beni Pulla Beni,1981,0pGQ7ie0yvg79MrIlR0wDt,Kaynakla doğrulandı
+Sezen Aksu,Firuze,1982,7wy9gDTUipeY35NKn45ru5,Albüm yılı
+Barış Manço,Halil İbrahim Sofrası,1983,28InCZKtXe9zQ2COjwXlM4,Kaynakla doğrulandı
+MFÖ,Ele Güne Karşı,1984,3Sy3MuMeVhCd2QwDwy0W6Q,Albüm yılı
+Sezen Aksu,Sen Ağlama,1984,5zasbkVjlMqviBcNCscbi2,Albüm yılı
+Sezen Aksu,Haydi Gel Benimle Ol,1984,6KBRNsL48BmRcQzUq1oSZq,Spotify çıkış tarihi
+MFÖ,Peki Peki Anladık,1985,4O0QzXVASBtxTEwMRcjq7O,Albüm yılı
+MFÖ,Diday Diday Day,1985,0Litu0mYDin8m4C6AEoCcj,Albüm yılı
+Ahmet Kaya,Hani Benim Gençliğim,1986,51i1qb35v1XfPPwHWvPu80,Kontrol edin
+Ahmet Kaya,Şafak Türküsü,1986,7rZQFQFN7JDBnscLg4qUBZ,Spotify çıkış tarihi
+MFÖ,Bu Sabah Yağmur Var İstanbul'da,1987,4GVzBVrDce2kS5TDQBMUJ5,Kontrol edin
+MFÖ,Sufi,1988,6tPf6mUzFuyctT8l3OxWNw,Albüm yılı
+Sezen Aksu,Sarışın,1988,1rXRimqD5OvYs3vQOJkX7m,Spotify çıkış tarihi
+İlhan İrem,Anlasana,1988,3bnmxfJyHcteCdqRrw4lpS,Spotify çıkış tarihi
+Sezen Aksu,Şinanay,1989,4LXLtYkX7JpdgZgKxdKF4k,Spotify çıkış tarihi
+Sezen Aksu,Belalım,1989,3s8h5i6wYqDoL2NkEg41w9,Spotify çıkış tarihi
+Ajda Pekkan,Sana Bana Yeter,1990,2TpVirb3OFe2ATpo0ixRgP,Kaynakla doğrulandı
+Ajda Pekkan,Yaz Yaz Yaz,1990,5EbVuS3Oe20q97M1lfn3yn,Spotify çıkış tarihi
+Nilüfer,Ve Melankoli,1990,378LpUsO9vxO2llxsoVkQs,Spotify çıkış tarihi
+Harun Kolçak,Gir Kanıma,1991,5S09A4WRyJdb1hEkLSD4Td,Spotify çıkış tarihi
+Kayahan,Yemin Ettim,1991,7i5nxqqVkKfmP4bK4j6OBD,Spotify çıkış tarihi
+Kayahan,Gözlerinin Hapsindeyim,1991,7B35SoCqYSOKiea23ZJ3QK,Spotify çıkış tarihi
+Nilüfer,Seni Beklerim Öptüğüm Yerde,1991,4KO86ZywAOBk5YjJOrux1b,Spotify çıkış tarihi
+Sezen Aksu,Hadi Bakalım,1991,51xYVRNDNAINQNHnRXITTx,Kaynakla doğrulandı
+Sezen Aksu,Gülümse,1991,5fejcHsVRZuxHu0XpCeiqf,Spotify çıkış tarihi
+Kayahan,Odalarda Işıksızım,1992,1xI6cB6mUbgFLz1cDcc6bA,Spotify çıkış tarihi
+Yonca Evcimik,Abone,1992,1oa6Yu9X9Z2aeaipmZk89O,Spotify çıkış tarihi
+Ebru Gündeş,Demir Attım,1993,4g1sEDAK74cYbJAQsd5Tzp,Spotify çıkış tarihi
+Fikret Kızılok,Bu Kalp Seni Unutur mu,1993,4Q2t1wFBSwgaPlgV5GpqZp,Spotify çıkış tarihi
+Haluk Levent,Yollarda Bulurum Seni,1993,2mwCk42hjSzBV7TgdeUd0z,Spotify çıkış tarihi
+Kibariye,Lafı mı Olur,1993,6UX8nGE5sT7FsUAgQILD6X,Spotify çıkış tarihi
+Levent Yüksel,Medcezir,1993,1Pd3EASeP8JwbySp3cjN1H,Spotify çıkış tarihi
+Levent Yüksel,Yeter Ki Onursuz Olmasın Aşk,1993,1TQ65zeLq6USjVDBmuxgsU,Spotify çıkış tarihi
+Sezen Aksu,Deli Kızın Türküsü,1993,3NDHk7zhL6qrzXulZUveJO,Spotify çıkış tarihi
+Tarkan,Kıl Oldum,1993,27TZaEuxaZWqacfVaTCmY5,Spotify çıkış tarihi
+Ahmet Kaya,Kum Gibi,1994,1vmzfiQsd8PHgt8Kgp7TgR,Spotify çıkış tarihi
+Bulutsuzluk Özlemi,Sözlerimi Geri Alamam,1994,7A8SrUqEvnMy4e9dt8kZtQ,Spotify çıkış tarihi
+Burak Kut,Benimle Oynama,1994,7KFe58J6TseJqoyvvIA52X,Spotify çıkış tarihi
+Demet Sağıroğlu,Arnavut Kaldırımı,1994,2aAq1yVfh63zajajsjv68o,Spotify çıkış tarihi
+Ezginin Günlüğü,Düşler Sokağı,1994,3CmtGSvMqCU0Phn6sEmclB,Spotify çıkış tarihi
+Hümeyra,Sessiz Gemi,1994,5QKVQAlDwBzMUiNyr2CgZg,Spotify çıkış tarihi
+Mustafa Sandal,Suç Bende,1994,6G4a4L3pgLQ5p0nUOBOwTe,Spotify çıkış tarihi
+Nazan Öncel,Dillere Düşeceğiz,1994,1XMQpxCXzIPfX5llxjW1zE,Spotify çıkış tarihi
+Serdar Ortaç,Karabiberim,1994,649HpAJEsVk2VuCadjunXu,Spotify çıkış tarihi
+Sertab Erener,Mecbursun,1994,30P0bhT0Ebfl9Bxua0mzYr,Spotify çıkış tarihi
+Tarkan,Hepsi Senin mi? (Şıkıdım),1994,72QQfTR5KfRJbVxaDrSmWO,Spotify çıkış tarihi
+Tarkan,Kış Güneşi,1994,1tiIKelgeYVi1KcylVnZdq,Spotify çıkış tarihi
+Yonca Evcimik,Bandıra Bandıra,1994,4pxRvWXrkTJBymcV1wy8aK,Spotify çıkış tarihi
+Barış Manço,Müsaadenizle Çocuklar,1995,4sQLH6KeyZz9LOAzctNIGJ,Kaynakla doğrulandı
+Bulutsuzluk Özlemi,Güneye Giderken,1995,50riIDthWHWbu11FxqOcbb,Spotify çıkış tarihi
+Candan Erçetin,Hazırım,1995,65qUkoAJunWF83uSiAozfD,Spotify çıkış tarihi
+Ferda Anıl Yarkın,Sonuna Kadar,1995,4Y9k6dEC7RnbIMgKCD9PUm,Spotify çıkış tarihi
+MFÖ,Mazeretim Var Asabiyim Ben,1995,5Ku52IUpK9kNRuzWBMYIaS,Spotify çıkış tarihi
+Mirkelam,Her Gece,1995,0Wk7DHKAYGVJjgU7YAWCV0,Spotify çıkış tarihi
+Sezen Aksu,Onu Alma Beni Al,1995,3LQdQ2XVJ35xJLA7vjq7eR,Spotify çıkış tarihi
+Sibel Tüzün,Kaçın Kurrası,1995,5PQwpKGb6bGHdVd4Ea1Qc0,Spotify çıkış tarihi
+Yıldız Tilbe,Vazgeçtim,1995,411ymbMvXsqsq7gWmiCeZD,Spotify çıkış tarihi
+Çelik,Dilberim,1995,1hmJp5SWAqzsm4mBYOCVyZ,Spotify çıkış tarihi
+Candan Erçetin,Umrumda Değil,1996,5EwuEwhtKAmWFMm8cVuM9W,Spotify çıkış tarihi
+Gülşen,"Saz mı, Caz mı",1996,6yxxkCCtVjnKA3Loyn8WER,Spotify çıkış tarihi
+Gülşen,Be Adam,1996,5R62yrYVMRZExYqxoPnQMn,Spotify çıkış tarihi
+Kenan Doğulu,Kandırdım,1996,3tIrKa0ZuJrAX30UzqPVEW,Spotify çıkış tarihi
+Mustafa Sandal,Jest Oldu,1996,78Pkg29xG0A9CtJe00NZUW,Spotify çıkış tarihi
+Niran Ünsal,Beyaz Sevda,1996,4wmK48zZ99LDWuTUnTYrWX,Spotify çıkış tarihi
+Sezen Aksu,Seni Yerler,1996,0seHKl9cX6sRrgO5Ql28b4,Spotify çıkış tarihi
+Yaşar,Kumralım,1996,3tCCD2qQLdC99YkRwGPSsx,Spotify çıkış tarihi
+Yaşar,Divane,1996,3V9Cf4pENsRh02WTMJ726n,Spotify çıkış tarihi
+Özlem Tekin,Laubali,1996,4hEuuKhZC8XolGSGhjRCqf,Spotify çıkış tarihi
+Şebnem Ferah,Yağmurlar,1996,6xCPxUo1OHGQpaN3CMb7DN,Spotify çıkış tarihi
+Bülent Ersoy,Maazallah,1997,11Daj3MiIxzwglZMQDc4XA,Spotify çıkış tarihi
+Doğuş,Uyan,1997,3swvoQqlnwvOJOj8ZrWdja,Spotify çıkış tarihi
+Göksel,Sabır,1997,3VsY8ODRtXZeyPKQ0htEHN,Spotify çıkış tarihi
+Mansur Ark,Maalesef,1997,2Bn3E90Aq8yFcRJDpZdzCo,Spotify çıkış tarihi
+Nalan,Yaralandım,1997,7lS4W2SVX3JeeSd5SRTyJu,Spotify çıkış tarihi
+Sibel Can,Padişah,1997,7859Rvo6wXeImidBRL2dUZ,Spotify çıkış tarihi
+Tarkan,Şımarık,1997,6vEL7E8TGzrxuxbrgdlkLL,Kaynakla doğrulandı
+Tarkan,Ölürüm Sana,1997,6nAgxB5x7vlGVVIoWpCwaM,Spotify çıkış tarihi
+Tarkan,Salına Salına Sinsice,1997,4PGsEvmwfJwNJJcsw9aaav,Spotify çıkış tarihi
+Tarkan,İnci Tanem,1997,3kBdY82CtGF2aDBGaNK0NP,Spotify çıkış tarihi
+Teoman,Papatya,1997,1ziQ7lMpFlhyQ3TbkllmE2,Spotify çıkış tarihi
+Zeynep Dizdar,Vazgeç Gönül,1997,4MH5lh1VQZfAXWFJFmPnKB,Spotify çıkış tarihi
+Ahmet Kaya,Nereden Bileceksiniz,1998,1RMnFV3jidSADH1ZSF8EAr,Spotify çıkış tarihi
+Athena,"Senden, Benden, Bizden",1998,7BGAsqmzVtq0Ms8o0MegsQ,Spotify çıkış tarihi
+Athena,Holigan,1998,0goKc2vm198SENAdmg0bdl,Spotify çıkış tarihi
+Mustafa Sandal,Aya Benzer,1998,6T1F7KwvtxUIsZXmRXyv3X,Spotify çıkış tarihi
+Teoman,Gemiler,1998,6RxF2qmsTBsXFgK0lx8WEj,Spotify çıkış tarihi
+Duman,Köprüaltı,1999,43tIlj5mqSjV4DPuDRb5NQ,Spotify çıkış tarihi
+Ebru Gündeş,Çingenem,1999,4zTOUtukd52LzS3bLWwzGc,Spotify çıkış tarihi
+Hakan Altun,Bana Göresin,1999,3Xq3Gozb3Iq02reKbWIx0w,Spotify çıkış tarihi
+Kader,Adamım,1999,2ZMY5U172NZyLrBOqrDevY,Spotify çıkış tarihi
+Serdar Ortaç,Asrın Hatası,1999,6rvF2IijcQ4six3yG8d7cy,Spotify çıkış tarihi
+Sertab Erener,Yanarım,1999,69dbmLAqR6BTHOvMpZ7XK3,Spotify çıkış tarihi
+Sertab Erener,Zor Kadın,1999,792QVjxxjKC1rgEwHI2G2d,Spotify çıkış tarihi
+Vega,Alışamadım Yokluğuna,1999,3FJIkYZLcZMXi7h7z509en,Spotify çıkış tarihi
+Yonca Lodi,Sana Bir Şey Olmasın,1999,6mouvH9qWINATfpuMNytXH,Spotify çıkış tarihi
+Ümit Sayın,Ben Tabii Ki,1999,7ssDqFuoNiVLu2vps3GL3b,Spotify çıkış tarihi
+Hande Yener,Yalanın Batsın,2000,0wyqLhwj5MlZeHjZqt3lq5,Spotify çıkış tarihi
+Sezen Aksu,Sarı Odalar,2000,3CPr8mAbqwHzPwuIaFJx1N,Spotify çıkış tarihi
+Teoman,Paramparça,2000,0vWr52Zx9XHl3qOVefySzY,Spotify çıkış tarihi
+Teoman & Şebnem Ferah,İki Yabancı,2000,2Eb9soohEouU73DZ5PA58j,Spotify çıkış tarihi
+Göksel,Depresyondayım,2001,47MuBj8x7h6nrfZ0AxDqC8,Spotify çıkış tarihi
+Kenan Doğulu,Tutamıyorum Zamanı,2001,5BQmSedOyNG47lwPZRF9am,Spotify çıkış tarihi
+Kıraç,Endamın Yeter,2001,5n1MwdIRqFtsFO4qp86USa,Spotify çıkış tarihi
+Sertab Erener,Kumsalda,2001,44P48IXl8neXU8K3YAKabd,Spotify çıkış tarihi
+Tarkan,Kuzu Kuzu,2001,3ajYmPDtB3P7JTPQ64Dr7P,Spotify çıkış tarihi
+Tarkan,Hüp,2001,0ZoWRdF0aj5nigXXJZFrNb,Spotify çıkış tarihi
+Tarkan,Sen Başkasın,2001,0ZJKPGKFJQM9riXJ8TOyiO,Spotify çıkış tarihi
+Candan Erçetin,Gamsız Hayat,2002,0MKjkTpnPt1OI1YFV1N1ZO,Spotify çıkış tarihi
+Duman,Her Şeyi Yak,2002,4uqlFpMPTKO6uAsX6qvK0l,Spotify çıkış tarihi
+Duman,Bu Akşam,2002,6jo5kjABNphNwXQ8ZyOLtZ,Spotify çıkış tarihi
+Mustafa Sandal,Pazara Kadar,2002,6oFKnqoauHLoR2liTCp4Os,Spotify çıkış tarihi
+Vega,Bu Sabahların Bir Anlamı Olmalı,2002,6uS2G7PdDL0qmYs6glOgrO,Spotify çıkış tarihi
+Çelik,Sen Yoluna Ben Yoluma,2002,2xwPWqmlhRGDAt5GVfgR5q,Spotify çıkış tarihi
+Nazan Öncel,Beni Hatırla,2003,4mwKj8jNSq8eTp3ylpcBAE,Spotify çıkış tarihi
+Tarkan,Dudu,2003,15xj7p5uDk9sDnNbQtgZ8Y,Spotify çıkış tarihi
+Teoman,Kupa Kızı ve Sinek Valesi,2003,68xnudIZzP49DreYAMlbqZ,Spotify çıkış tarihi
+Ceza & Sagopa Kajmer,Neyim Var Ki,2004,09XOVDSIbBxBf6Kr1vGnHf,Spotify çıkış tarihi
+Demet Akalın,Banane,2004,3CjnMljgviz35ADqiVNUlT,Spotify çıkış tarihi
+Gülşen,Of Of,2004,7xFDR23YLmIhHn55Ad5gYp,Spotify çıkış tarihi
+Hande Yener,Kırmızı,2004,2pTVNLRAfud4odx8SSO6cY,Spotify çıkış tarihi
+Pamela,İstanbul,2004,27sRogaIuUA9UteLoPcEDw,Spotify çıkış tarihi
+Tarık Mengüç,Şak Şuka,2004,3ICmVJmidTUOM8E9ARefyF,Spotify çıkış tarihi
+maNga,Bir Kadın Çizeceksin,2004,397A58sUsAVNZlvriDmfl9,Spotify çıkış tarihi
+mor ve ötesi,Bir Derdim Var,2004,5oecOcmSEHs7MZiB0NPbFu,Spotify çıkış tarihi
+mor ve ötesi,Cambaz,2004,3ZkA3JnqluUWzwr64BBkl4,Spotify çıkış tarihi
+Duman,Seni Kendime Sakladım,2005,4TjX6QIQVSD3j2VAxlR2wa,Spotify çıkış tarihi
+Hepsi,Yalan,2005,18C6zrCifmpCBkuvAeOL4L,Spotify çıkış tarihi
+Seksendört,Ölürüm Hasretinle,2005,6y3vkPoWtLtYSvTqHBKO4z,Spotify çıkış tarihi
+Yalın,Keşke,2005,4g8phMgjFb2RecauuBJXmZ,Spotify çıkış tarihi
+Şebnem Ferah,Çakıl Taşları,2005,03sf6gnuqZNE9sGrRi8WAc,Spotify çıkış tarihi
+Emre Aydın,Afili Yalnızlık,2006,154DPZSqgJ958y0d33MfPi,Spotify çıkış tarihi
+Gülşen,Ne Kavgam Bitti Ne Sevdam,2006,5QWJgdaZ95c41wb8ZjaZ6K,Spotify çıkış tarihi
+Hande Yener,Kelepçe,2006,1QUKFP4OXvdpm0ZgkDIHwB,Spotify çıkış tarihi
+Hande Yener,Aşkın Ateşi,2006,3sgBQybW08n0CzVmkOEtAp,Spotify çıkış tarihi
+Hepsi,Kalpsizsin,2006,7L1e4zs7ZtFW4CU9lxtWV5,Spotify çıkış tarihi
+Kenan Doğulu,Çakkıdı,2006,1jH3jM3CqPmZcX7gzVPLHb,Spotify çıkış tarihi
+Murat Boz,Aşkı Bulamam Ben,2006,4YGoYeshftVaDxk4Cl9pYa,Düzeltildi
+Nil Karaibrahimgil & Ayben,Peri,2006,3i9VQ6lmQe6Tms9fdxUigO,Spotify çıkış tarihi
+Pinhani,Hele Bi Gel,2006,5nuGiGWV1tGsLYqi0Y8RmZ,Spotify çıkış tarihi
+Serdar Ortaç,Dansöz,2006,0ry1DcOVebPl6QMQQnY3Dr,Spotify çıkış tarihi
+maNga & Göksel,Dursun Zaman,2006,110lLYj8VghNryOewSj15h,Düzeltildi
+Ceza,Yerli Plaka,2007,6qLGmqg7yfTVotHvxVClZ8,Spotify çıkış tarihi
+Gripin,Böyle Kahpedir Dünya,2007,5VFasLYUqKVUymkLK6L6AG,Spotify çıkış tarihi
+Hande Yener,Romeo,2007,05fl9eOSX7KfcNbnauOUmT,Spotify çıkış tarihi
+Ajda Pekkan,Aynen Öyle,2008,7f3FiIfoZG67tddAGdGowu,Spotify çıkış tarihi
+Demet Akalın,Bebek,2008,76sziwDzTzVmk4HPBUmRWL,Spotify çıkış tarihi
+Ferhat Göçer,Biri Bana Gelsin,2008,1b5iNCvJzcTgTXcUmZaUb3,Spotify çıkış tarihi
+mor ve ötesi,Deli,2008,3eEmeP2ydpJDtl0tY91t8Y,Spotify çıkış tarihi
+İsmail YK,Bas Gaza,2008,0EXKIM7dUZ2EN3cuQ1G8BK,Spotify çıkış tarihi
+Demet Akalın,Toz Pembe,2009,49j2azxeW8yqDAR1rWBNla,Spotify çıkış tarihi
+Funda Arar,Yak Gel,2009,7ohxCJuCDwDn7DyNmKveE8,Spotify çıkış tarihi
+Gülşen,Dillere Düşeceğiz Seninle,2009,1QuL5ALIuQ6djrKNT7BXy2,Spotify çıkış tarihi
+Gülşen,Ezberbozan,2009,4CzKBO7d7Sft3oZbeQLLde,Spotify çıkış tarihi
+Hadise,Evlenmeliyiz,2009,0kaKXWNv1Fd8buBpcd8W3I,Spotify çıkış tarihi
+Atiye,Salla,2010,04Aq0PDoKzXkNvW0suggOt,Spotify çıkış tarihi
+Atiye & Teoman,Kal,2010,7jBf2bHHVJ7a6GdrlcxbJ5,Spotify çıkış tarihi
+Duman,Senden Daha Güzel,2010,2sLAykCWyB1VA5hXDjU59T,Spotify çıkış tarihi
+Emre Aydın,Hoşçakal,2010,4NgBpiVDCdDvpiV92QIekx,Spotify çıkış tarihi
+Hande Yener,Bodrum,2010,2yZhYOrX9ukmcyfIjGYx9O,Spotify çıkış tarihi
+Serdar Ortaç,Poşet,2010,0PlABPqYHKhlhTgGbHWuMr,Spotify çıkış tarihi
+Sıla,Sevişmeden Uyumayalım,2010,5FWt4kjAGU6nKAVIRh14Hx,Spotify çıkış tarihi
+Sıla,Yara Bende,2010,7KVLOazYiLgcfnJQL5SWaJ,Spotify çıkış tarihi
+Sıla,Boş Yere,2010,2gZeqcysy8j1FrrBUVdIb8,Spotify çıkış tarihi
+Tarkan,Öp,2010,0OFivfe4fC4QR20TzMVbfM,Spotify çıkış tarihi
+Tarkan,Adımı Kalbine Yaz,2010,4gXX2ayvtMf4Tc5DCSHFTH,Spotify çıkış tarihi
+Ajda Pekkan,Yakar Geçerim,2011,41EfGbF3T66mbR67xvNYvm,Spotify çıkış tarihi
+Can Bonomo,Meczup,2011,0yki8SRGIYPbhaCxAu0gHT,Spotify çıkış tarihi
+Hadise,Aşk Kaç Beden Giyer,2011,3sddjz6uEaCJP84fFfS5s5,Spotify çıkış tarihi
+Model,Pembe Mezarlık,2011,1cwth5tNynCfH2ZYCmShDc,Spotify çıkış tarihi
+Murat Boz,Kalamam Arkadaş,2011,2DG2lvAjiZ3XAFlklIdYPd,Spotify çıkış tarihi
+Murat Boz,Aşklarım Büyük Benden,2011,6YCD3AQzafDn3PhzbXEYf1,Spotify çıkış tarihi
+Murat Dalkılıç,La Fontaine,2011,3EXfLVsOsULokA3k87BOIe,Spotify çıkış tarihi
+Sezen Aksu,Unuttun mu Beni,2011,0x9154bA7PgqF6Za1CtszP,Spotify çıkış tarihi
+Demet Akalın,Türkan,2012,0xwPjduuMeGTGxiFP4DqjY,Spotify çıkış tarihi
+Fettah Can,Boş Bardak,2012,2fFoXj2aUlaezPp3SinfSD,Spotify çıkış tarihi
+Hande Yener,Acı Veriyor,2012,7LN2CCgK29n5iv3v37jaab,Spotify çıkış tarihi
+Kenan Doğulu,Şans Meleğim,2012,0YUCEubKOccZGuCWABCH0E,Spotify çıkış tarihi
+Sıla,Vaziyetler,2012,5voZKuwzMtKxp4Vkgc7kdY,Düzeltildi
+mor ve ötesi,Oyunbozan,2012,4Po5JZuDOXRGHFt0Uhwn80,Spotify çıkış tarihi
+Gülşen,Yatcaz Kalkcaz Ordayım,2013,2tmLY3JS7JpSo456P9hfiH,Spotify çıkış tarihi
+Sagopa Kajmer,Baytar,2013,6iWvJmp3gA8DxTuN4BSECB,Spotify çıkış tarihi
+Sinan Akçıl,Tabi Tabi,2014,7IGM6xSqkGQRBxcdIhEkar,Spotify çıkış tarihi
+Sıla,Saki,2014,49QLsKe0brkbWHK7GKTGHf,Spotify çıkış tarihi
+İrem Derici,Kalbimin Tek Sahibine,2014,2s84uRN09uvUJZL0OsW8oL,Spotify çıkış tarihi
+Ece Seçkin,Aman Aman,2015,4eAtZgGOOuzn4Djo2g8E8x,Spotify çıkış tarihi
+Göksel,Sen Orda Yoksun,2015,0xB1twgXnL1hEwLRWdRUIe,Spotify çıkış tarihi
+Gülşen,Bangır Bangır,2015,73DhXPWV5NsxRSe0qy26TR,Spotify çıkış tarihi
+Hande Yener & Serdar Ortaç,İki Deli,2015,0DugZtHY7vxoRxL9IPqcEu,Spotify çıkış tarihi
+Mabel Matiz,Gel,2015,0OGpY82sToZSrrDgk4Iuic,Spotify çıkış tarihi
+Simge,Miş Miş,2015,3Gr6bwxTHtS3KaDUfT2CFB,Spotify çıkış tarihi
+Adamlar,Rüyalarda Buruşmuşum,2016,4cQSOn9oP0MiM7BgiRngFk,Spotify çıkış tarihi
+Edis,Dudak,2016,6rWID4G0g3vGL4YGp7f2h6,Spotify çıkış tarihi
+Emrah Karaduman & Aleyna Tilki,Cevapsız Çınlama,2016,64Rq8DjhO6l6meQjNJuRQF,Spotify çıkış tarihi
+Murat Boz,Gün Ağardı,2016,7KglDqFffEIOzF1mkx1N0o,Spotify çıkış tarihi
+Murat Boz,Janti,2016,6DHXEFiovFZgQAhuviC6QS,Spotify çıkış tarihi
+Simge,Yankı,2016,4y3QBJf9E8yDJCEFbRK8xk,Spotify çıkış tarihi
+Sıla,Yan Benimle,2016,2LX6XfSqCKBrt2qJngS87z,Spotify çıkış tarihi
+Aleyna Tilki,Sen Olsan Bari,2017,5ExsZq3AmQGxavPJOzf0M5,Spotify çıkış tarihi
+Deeperise & Jabbar,Raf,2017,1jStctxoCQu67sVWxzatLC,Spotify çıkış tarihi
+Ezhel,Geceler,2017,0R0o8uOkDz40XsR6uwThfQ,Spotify çıkış tarihi
+Gazapizm,Heyecanı Yok,2017,4pZiksfH69OLW1BLGBzeM2,Spotify çıkış tarihi
+Kalben,Yara,2017,1IquNFg2RRH1CLRAHNVgQ9,Spotify çıkış tarihi
+Oğuzhan Koç,Vermem Seni Ellere,2017,5m0xKFMim80XzJ1HM0IBwW,Spotify çıkış tarihi
+Sezen Aksu,Manifesto,2017,2MLxpHtqNLlUmXTkVXai6w,Spotify çıkış tarihi
+Tarkan,Yolla,2017,1vZAYNFTcxzrnooQUw5zKD,Spotify çıkış tarihi
+Tarkan,Beni Çok Sev,2017,0uyWiTVblh6pV6JQlIe72e,Spotify çıkış tarihi
+Buray,Tac Mahal,2018,26uHtSrQXUad9uCqxPiIXJ,Spotify çıkış tarihi
+Edis,Çok Çok,2018,4UajeO5lnxguN9RNutaT5D,Spotify çıkış tarihi
+Gökhan Türkmen,Bitmesin,2018,3MHL0Nb0cLfJN4xHpWFNJR,Spotify çıkış tarihi
+Mabel Matiz,Öyle Kolaysa,2018,4FGYzQqH2i1E3OtuMydnzY,Spotify çıkış tarihi
+Melike Şahin,Tutuşmuş Beraber,2018,0ELKA403grwyEZLPMzJRKs,Spotify çıkış tarihi
+Yüzyüzeyken Konuşuruz,Dinle Beni Bi',2018,11PO9iu6PtpgL1JK4QNUEJ,Spotify çıkış tarihi
+Ben Fero,Mahallemiz Esmer,2019,3qOxkhNytyb6ifxNzxxULn,Spotify çıkış tarihi
+Ezhel,Felaket,2019,5vJTUmbKFvFMcirWag0XJD,Spotify çıkış tarihi
+Mabel Matiz,Gözlerine,2019,4MbZZG6KCC6QaUByvs9vmA,Spotify çıkış tarihi
+Murda & Ezhel,AYA,2019,3LHlFTXgkJLdQJ4RITnDIb,Spotify çıkış tarihi
+Zeynep Bastık,Her Yerde Sen,2019,1L8breHwaAapLwp7tcIPF9,Spotify çıkış tarihi
+Mabel Matiz,Toy,2020,3JHzYXarT3Y3Fta58XNuXD,Spotify çıkış tarihi
+Murda & Ezhel,Made In Turkey,2020,3W4seDHEWHR35WuKZOP1Yq,Spotify çıkış tarihi
+Reynmen,Leila,2020,1RqNAiL2toZ59HTjQbFLfM,Spotify çıkış tarihi
+UZI,Makina,2020,2huQiKGkgUfp4WjnVRSobL,Spotify çıkış tarihi
+Bora Duran,Döndüm,2021,2pc1hu3tfc90Ito191MM9J,Spotify çıkış tarihi
+Edis,Martılar,2021,1xEpgyKx4ZHtefFAh0SmU5,Spotify çıkış tarihi
+Mabel Matiz,Kahrettim,2021,6oSiqvaLNJk8PWF9G7jGh8,Spotify çıkış tarihi
+Mark Eliyahu & Cem Adrian,Derinlerde,2021,15Wl8jVyU8t3tuFJHEFcCw,Spotify çıkış tarihi
+Sefo,Bilmem Mi?,2021,5BQGKDekRGPXtEVWOgBokr,Spotify çıkış tarihi
+Dedublüman & Mavzer Tabancas,Belki,2022,5ATwkalJ9FnLp7Zcvxo1rl,Spotify çıkış tarihi
+Mert Demir & Mabel Matiz,Antidepresan,2022,4OH5Cd8ZOI1eSgJSC9PYmU,Spotify çıkış tarihi
+Tarkan,Geççek,2022,7qT1uoiwvXEHSjaiHbw0n1,Spotify çıkış tarihi
+Mert Demir,Ateşe Düştüm,2023,3auN910HHNYykQo8i9q5J1,Spotify çıkış tarihi
+"Semicenk, Doğu Swag & Büken",Pişman Değilim,2023,4Sdj67b8WF9PhAXh4tvBi6,Spotify çıkış tarihi
+Semicenk & Büken,Çıkmaz Bir Sokakta,2025,4SJjMPowhsrYSWgxM61yxm,Spotify çıkış tarihi
+Ahiyan,Kralın Kızı,2026,4nCjL15kmLv68gO5Cvvgnz,Spotify çıkış tarihi
+Aykut Aksöz,Yüreğime mi Sorsam?,2026,0wwJSut39s3Obzvjti9m8X,Spotify çıkış tarihi
+BLOK3,Sebebi Yar,2026,1gd1TicErR4bwjR3CYxyra,Spotify çıkış tarihi
+BLOK3,Kayıp Kalp,2026,3H4aYDeSswC31fSOWJtWdg,Spotify çıkış tarihi
+Burak Bulut & İrem Derici,Garson,2026,2rWiGPqi1ECjYummm6o6hs,Spotify çıkış tarihi
+CRUSH,Benim Olsana,2026,5PW7h2o6qYWUmwAultwZdf,Spotify çıkış tarihi
+Emir Can İğrek,Geçmiş Geçmişte,2026,1uqJRzjN2AOwAkT2sBO3Xv,Spotify çıkış tarihi
+Eypio,Şahidim,2026,3xnGK6EsiHUrDdHqjrbDC3,Spotify çıkış tarihi
+Ezhel,Bana Ne Bu Sevdalardan,2026,5j7ypeN8HkyGKRNjRagPrR,Spotify çıkış tarihi
+Mabel Matiz,Umrumdışı,2026,14xSndBPmB5bsYmKbwkhnB,Spotify çıkış tarihi
+Motive,YIN YANG,2026,1hvPVRogJLyumymUkWivXx,Spotify çıkış tarihi
+Zeki Arkun,Ayrılıyoruz,2026,1QFkEeBqQXP1naUsu85bYI,Spotify çıkış tarihi
+manifest,TRALALA,2026,6hPPwiXH4Y4kmc121v9Fdg,Spotify çıkış tarihi
+manifest & Ajda Pekkan,Hileli,2026,4eBE6hpwm7aJxIY4iwgwU8,Spotify çıkış tarihi

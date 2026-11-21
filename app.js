@@ -290,6 +290,7 @@
     if (!currentSong) return;
     const [r, g, b] = yearColor(+currentSong.year);
     const card = $("song-card");
+    card.style.color = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 < 0.42 ? "#fff" : "#141419";
     card.style.background = `linear-gradient(180deg, rgb(${r + 20 > 255 ? 255 : r + 20},${g + 20 > 255 ? 255 : g + 20},${b + 20 > 255 ? 255 : b + 20}), rgb(${r * .88 | 0},${g * .88 | 0},${b * .88 | 0}))`;
     $("sc-artist").textContent = currentSong.artist;
     $("sc-year").textContent = currentSong.year;

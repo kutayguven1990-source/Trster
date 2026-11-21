@@ -1,9 +1,465 @@
 [
  {
+  "artist": "Erol Büyükburç",
+  "title": "Ağlarım",
+  "year": 1966,
+  "spotify_id": "79YMC3bFJsHSfv3kRFpIs0"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Kol Düğmeleri",
+  "year": 1967,
+  "spotify_id": "53XpYnPMm9sDql7MDj97yJ"
+ },
+ {
+  "artist": "Erkin Koray",
+  "title": "Kızları da Alın Askere",
+  "year": 1967,
+  "spotify_id": "6pVmIqB2dYXfnYoeVls8A1"
+ },
+ {
+  "artist": "Cem Karaca",
+  "title": "Resimdeki Gözyaşları",
+  "year": 1968,
+  "spotify_id": "1FWtprHStw6VvFqFXDmLT9"
+ },
+ {
+  "artist": "Erol Büyükburç",
+  "title": "Sus Sus Sus",
+  "year": 1968,
+  "spotify_id": "4DgLmEzcjdkUU8yDpRka7o"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Ağlama Değmez Hayat",
+  "year": 1969,
+  "spotify_id": "4D7CCThyTeNSH2ERjz427S"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Sensiz Yıllarda",
+  "year": 1970,
+  "spotify_id": "2qhpl7tILS0EoGsQGPKR6M"
+ },
+ {
   "artist": "Barış Manço",
   "title": "Dağlar Dağlar",
   "year": 1970,
-  "spotify_id": "3EXO6y0bM6VZIKN0D720Ry"
+  "spotify_id": "7iDB2RmJfPGIrgN42PBDLw"
+ },
+ {
+  "artist": "Cem Karaca",
+  "title": "Dadaloğlu",
+  "year": 1970,
+  "spotify_id": "41yVVgk7YftX6gQkl6QM8V"
+ },
+ {
+  "artist": "Gönül Turgut",
+  "title": "Sarhoş",
+  "year": 1970,
+  "spotify_id": "7aKxibnLCUfg95DpvRzNWA"
+ },
+ {
+  "artist": "Orhan Gencebay",
+  "title": "Bir Teselli Ver",
+  "year": 1971,
+  "spotify_id": "6QCRMujmf6JzxeOSSkhbry"
+ },
+ {
+  "artist": "Selda Bağcan",
+  "title": "Yalan Dünya",
+  "year": 1971,
+  "spotify_id": "2BTJHPI8SCdXGf9QoPeSbd"
+ },
+ {
+  "artist": "Selda Bağcan",
+  "title": "Tatlı Dillim",
+  "year": 1971,
+  "spotify_id": "64YPrxOZPvJaVoKsVwK1R4"
+ },
+ {
+  "artist": "Ayten Alpman",
+  "title": "Bir Başkadır Benim Memleketim",
+  "year": 1972,
+  "spotify_id": "5aMamSujiQaB2YHHLT6nnu"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Kimler Geldi Kimler Geçti",
+  "year": 1973,
+  "spotify_id": "2pJi3QHIg0nrRyWfI3mJqM"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Tanrı Misafiri",
+  "year": 1973,
+  "spotify_id": "4QTl5IR0LaI8EgyLZCwTpe"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Palavra Palavra",
+  "year": 1973,
+  "spotify_id": "70BvZcLULViwenytMNAItP"
+ },
+ {
+  "artist": "Ayla Algan",
+  "title": "Anlasana",
+  "year": 1973,
+  "spotify_id": "17rJirycz0Sa7TNvmY6VnJ"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Lambaya Püf De",
+  "year": 1973,
+  "spotify_id": "47Ar6XLLUq5BtMn06NihJo"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Gönül Dağı",
+  "year": 1973,
+  "spotify_id": "1i11YMwhoTIIlX6H1of5x9"
+ },
+ {
+  "artist": "Semiramis Pekkan",
+  "title": "Olmaz Bu İş Olamaz",
+  "year": 1973,
+  "spotify_id": "3S7VCuq7pxnmr8S3UmDsQn"
+ },
+ {
+  "artist": "Tanju Okan",
+  "title": "Kadınım",
+  "year": 1973,
+  "spotify_id": "3pSXNxKO7b5iPJEJHszkLf"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Sana Neler Edeceğim",
+  "year": 1974,
+  "spotify_id": "4ViJpCfojsF6yncsDtXGFW"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Nazar Eyle",
+  "year": 1974,
+  "spotify_id": "6fT8LXtNA1JxpqifsNAoLx"
+ },
+ {
+  "artist": "Bülent Ortaçgil",
+  "title": "Benimle Oynar mısın",
+  "year": 1974,
+  "spotify_id": "69QnkvrvdrIf81NhNPF6Ca"
+ },
+ {
+  "artist": "Edip Akbayram",
+  "title": "Aldırma Gönül",
+  "year": 1974,
+  "spotify_id": "6oRdeY9FOgaaf3tGpWSGRR"
+ },
+ {
+  "artist": "Erkin Koray",
+  "title": "Seni Her Gördüğümde",
+  "year": 1974,
+  "spotify_id": "5MAv1RGwsagnfxgzB1nYqz"
+ },
+ {
+  "artist": "Erkin Koray",
+  "title": "Fesuphanallah",
+  "year": 1974,
+  "spotify_id": "6730FVE2mSVXMbjzrSPuJM"
+ },
+ {
+  "artist": "Gönül Yazar",
+  "title": "Bir Gece Ansızın Gelebilirim",
+  "year": 1974,
+  "spotify_id": "6UpUUXRWpay996IKCdajmF"
+ },
+ {
+  "artist": "Neşe Karaböcek",
+  "title": "Kulakların Çınlasın",
+  "year": 1974,
+  "spotify_id": "2JPq57xN0eXFGknRrQxfoc"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Hoşgör Sen",
+  "year": 1975,
+  "spotify_id": "482pYhVH8RoC9nSKvTPa8C"
+ },
+ {
+  "artist": "Ayten Alpman",
+  "title": "Ben Böyleyim",
+  "year": 1975,
+  "spotify_id": "4PdRmauZ4AF8HJiwpMVaXT"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Ben Bilirim",
+  "year": 1975,
+  "spotify_id": "48VLMQSr6dCa2Mhi7nEstw"
+ },
+ {
+  "artist": "Cem Karaca",
+  "title": "Tamirci Çırağı",
+  "year": 1975,
+  "spotify_id": "46X0rddXGD4C5CJOBmHQqD"
+ },
+ {
+  "artist": "Güzin ile Baha",
+  "title": "Gençlik Başımda Duman",
+  "year": 1975,
+  "spotify_id": "5Ox8yqAfQvNwaDoGlkU2al"
+ },
+ {
+  "artist": "Orhan Gencebay",
+  "title": "Batsın Bu Dünya",
+  "year": 1975,
+  "spotify_id": "4P9ZJZERMOt0CkMIy1HkmW"
+ },
+ {
+  "artist": "Semiha Yankı",
+  "title": "Seninle Bir Dakika",
+  "year": 1975,
+  "spotify_id": "371nNwFetX7GVB7Po7Z1nu"
+ },
+ {
+  "artist": "Erkin Koray",
+  "title": "Öyle Bir Geçer",
+  "year": 1976,
+  "spotify_id": "0YED4pCW0UsmwAmdSebTUQ"
+ },
+ {
+  "artist": "Gökben",
+  "title": "Aşk Dediğin Laftır",
+  "year": 1976,
+  "spotify_id": "0OhYmvzNF3dVdNp3xPBAOv"
+ },
+ {
+  "artist": "Orhan Gencebay",
+  "title": "Hatasız Kul Olmaz",
+  "year": 1976,
+  "spotify_id": "4fQHH8HlNoPBxRi5vorTIf"
+ },
+ {
+  "artist": "Selda Bağcan",
+  "title": "Yaz Gazeteci Yaz",
+  "year": 1976,
+  "spotify_id": "0FA1jw000DERDofpyOoTot"
+ },
+ {
+  "artist": "Seyyal Taner",
+  "title": "Son Verdim Kalbimin İşine",
+  "year": 1976,
+  "spotify_id": "1o7GNDGGssOGUEHqwUo9uk"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Olmaz Olsun",
+  "year": 1976,
+  "spotify_id": "7cBrFAIZjrEExD0Y4AxpWT"
+ },
+ {
+  "artist": "Tanju Okan",
+  "title": "Deli Gibi Sevdim",
+  "year": 1976,
+  "spotify_id": "0dlENlYyl8Ji0QZjNgFFQm"
+ },
+ {
+  "artist": "Nilüfer",
+  "title": "Kim Arar Seni",
+  "year": 1977,
+  "spotify_id": "26XF1yu245TBBL08UwMPgF"
+ },
+ {
+  "artist": "Nükhet Duru",
+  "title": "Ben Sana Vurgunum",
+  "year": 1977,
+  "spotify_id": "14GcLsc9WELDLqxXQSiGkE"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Kusura Bakma",
+  "year": 1977,
+  "spotify_id": "4UqZRNx9idkEeO9Nj94ath"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Ya Sonra",
+  "year": 1978,
+  "spotify_id": "5isNo45nZeye2BcvbR6D4q"
+ },
+ {
+  "artist": "Gülden Karaböcek",
+  "title": "Dilek Taşı",
+  "year": 1978,
+  "spotify_id": "2R1liFqvBLEYVqtx8RfXim"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Kaç Yıl Geçti Aradan",
+  "year": 1978,
+  "spotify_id": "3NyqgX4Oy8p4SljMMsjXUO"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Petrol",
+  "year": 1980,
+  "spotify_id": "5Cc1WChf2HPs5f5U0njCFD"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Gülpembe",
+  "year": 1981,
+  "spotify_id": "2mKX3nnLDmWVSp1aAkuDGb"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Hal Hal",
+  "year": 1981,
+  "spotify_id": "0lrfWTxWwdZWWtJsXXL31z"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Arkadaşım Eşşek",
+  "year": 1981,
+  "spotify_id": "0a3UdqBwx0tGNQLHZF427N"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Alla Beni Pulla Beni",
+  "year": 1981,
+  "spotify_id": "0pGQ7ie0yvg79MrIlR0wDt"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Firuze",
+  "year": 1982,
+  "spotify_id": "7wy9gDTUipeY35NKn45ru5"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Halil İbrahim Sofrası",
+  "year": 1983,
+  "spotify_id": "28InCZKtXe9zQ2COjwXlM4"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Ele Güne Karşı",
+  "year": 1984,
+  "spotify_id": "3Sy3MuMeVhCd2QwDwy0W6Q"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Sen Ağlama",
+  "year": 1984,
+  "spotify_id": "5zasbkVjlMqviBcNCscbi2"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Haydi Gel Benimle Ol",
+  "year": 1984,
+  "spotify_id": "6KBRNsL48BmRcQzUq1oSZq"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Peki Peki Anladık",
+  "year": 1985,
+  "spotify_id": "4O0QzXVASBtxTEwMRcjq7O"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Diday Diday Day",
+  "year": 1985,
+  "spotify_id": "0Litu0mYDin8m4C6AEoCcj"
+ },
+ {
+  "artist": "Ahmet Kaya",
+  "title": "Hani Benim Gençliğim",
+  "year": 1986,
+  "spotify_id": "51i1qb35v1XfPPwHWvPu80"
+ },
+ {
+  "artist": "Ahmet Kaya",
+  "title": "Şafak Türküsü",
+  "year": 1986,
+  "spotify_id": "7rZQFQFN7JDBnscLg4qUBZ"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Bu Sabah Yağmur Var İstanbul'da",
+  "year": 1987,
+  "spotify_id": "4GVzBVrDce2kS5TDQBMUJ5"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Sufi",
+  "year": 1988,
+  "spotify_id": "6tPf6mUzFuyctT8l3OxWNw"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Sarışın",
+  "year": 1988,
+  "spotify_id": "1rXRimqD5OvYs3vQOJkX7m"
+ },
+ {
+  "artist": "İlhan İrem",
+  "title": "Anlasana",
+  "year": 1988,
+  "spotify_id": "3bnmxfJyHcteCdqRrw4lpS"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Şinanay",
+  "year": 1989,
+  "spotify_id": "4LXLtYkX7JpdgZgKxdKF4k"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Belalım",
+  "year": 1989,
+  "spotify_id": "3s8h5i6wYqDoL2NkEg41w9"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Sana Bana Yeter",
+  "year": 1990,
+  "spotify_id": "2TpVirb3OFe2ATpo0ixRgP"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Yaz Yaz Yaz",
+  "year": 1990,
+  "spotify_id": "5EbVuS3Oe20q97M1lfn3yn"
+ },
+ {
+  "artist": "Nilüfer",
+  "title": "Ve Melankoli",
+  "year": 1990,
+  "spotify_id": "378LpUsO9vxO2llxsoVkQs"
+ },
+ {
+  "artist": "Harun Kolçak",
+  "title": "Gir Kanıma",
+  "year": 1991,
+  "spotify_id": "5S09A4WRyJdb1hEkLSD4Td"
+ },
+ {
+  "artist": "Kayahan",
+  "title": "Yemin Ettim",
+  "year": 1991,
+  "spotify_id": "7i5nxqqVkKfmP4bK4j6OBD"
+ },
+ {
+  "artist": "Kayahan",
+  "title": "Gözlerinin Hapsindeyim",
+  "year": 1991,
+  "spotify_id": "7B35SoCqYSOKiea23ZJ3QK"
+ },
+ {
+  "artist": "Nilüfer",
+  "title": "Seni Beklerim Öptüğüm Yerde",
+  "year": 1991,
+  "spotify_id": "4KO86ZywAOBk5YjJOrux1b"
  },
  {
   "artist": "Sezen Aksu",
@@ -12,10 +468,592 @@
   "spotify_id": "51xYVRNDNAINQNHnRXITTx"
  },
  {
+  "artist": "Sezen Aksu",
+  "title": "Gülümse",
+  "year": 1991,
+  "spotify_id": "5fejcHsVRZuxHu0XpCeiqf"
+ },
+ {
+  "artist": "Kayahan",
+  "title": "Odalarda Işıksızım",
+  "year": 1992,
+  "spotify_id": "1xI6cB6mUbgFLz1cDcc6bA"
+ },
+ {
+  "artist": "Yonca Evcimik",
+  "title": "Abone",
+  "year": 1992,
+  "spotify_id": "1oa6Yu9X9Z2aeaipmZk89O"
+ },
+ {
+  "artist": "Ebru Gündeş",
+  "title": "Demir Attım",
+  "year": 1993,
+  "spotify_id": "4g1sEDAK74cYbJAQsd5Tzp"
+ },
+ {
+  "artist": "Fikret Kızılok",
+  "title": "Bu Kalp Seni Unutur mu",
+  "year": 1993,
+  "spotify_id": "4Q2t1wFBSwgaPlgV5GpqZp"
+ },
+ {
+  "artist": "Haluk Levent",
+  "title": "Yollarda Bulurum Seni",
+  "year": 1993,
+  "spotify_id": "2mwCk42hjSzBV7TgdeUd0z"
+ },
+ {
+  "artist": "Kibariye",
+  "title": "Lafı mı Olur",
+  "year": 1993,
+  "spotify_id": "6UX8nGE5sT7FsUAgQILD6X"
+ },
+ {
+  "artist": "Levent Yüksel",
+  "title": "Medcezir",
+  "year": 1993,
+  "spotify_id": "1Pd3EASeP8JwbySp3cjN1H"
+ },
+ {
+  "artist": "Levent Yüksel",
+  "title": "Yeter Ki Onursuz Olmasın Aşk",
+  "year": 1993,
+  "spotify_id": "1TQ65zeLq6USjVDBmuxgsU"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Deli Kızın Türküsü",
+  "year": 1993,
+  "spotify_id": "3NDHk7zhL6qrzXulZUveJO"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Kıl Oldum",
+  "year": 1993,
+  "spotify_id": "27TZaEuxaZWqacfVaTCmY5"
+ },
+ {
+  "artist": "Ahmet Kaya",
+  "title": "Kum Gibi",
+  "year": 1994,
+  "spotify_id": "1vmzfiQsd8PHgt8Kgp7TgR"
+ },
+ {
+  "artist": "Bulutsuzluk Özlemi",
+  "title": "Sözlerimi Geri Alamam",
+  "year": 1994,
+  "spotify_id": "7A8SrUqEvnMy4e9dt8kZtQ"
+ },
+ {
+  "artist": "Burak Kut",
+  "title": "Benimle Oynama",
+  "year": 1994,
+  "spotify_id": "7KFe58J6TseJqoyvvIA52X"
+ },
+ {
+  "artist": "Demet Sağıroğlu",
+  "title": "Arnavut Kaldırımı",
+  "year": 1994,
+  "spotify_id": "2aAq1yVfh63zajajsjv68o"
+ },
+ {
+  "artist": "Ezginin Günlüğü",
+  "title": "Düşler Sokağı",
+  "year": 1994,
+  "spotify_id": "3CmtGSvMqCU0Phn6sEmclB"
+ },
+ {
+  "artist": "Hümeyra",
+  "title": "Sessiz Gemi",
+  "year": 1994,
+  "spotify_id": "5QKVQAlDwBzMUiNyr2CgZg"
+ },
+ {
+  "artist": "Mustafa Sandal",
+  "title": "Suç Bende",
+  "year": 1994,
+  "spotify_id": "6G4a4L3pgLQ5p0nUOBOwTe"
+ },
+ {
+  "artist": "Nazan Öncel",
+  "title": "Dillere Düşeceğiz",
+  "year": 1994,
+  "spotify_id": "1XMQpxCXzIPfX5llxjW1zE"
+ },
+ {
+  "artist": "Serdar Ortaç",
+  "title": "Karabiberim",
+  "year": 1994,
+  "spotify_id": "649HpAJEsVk2VuCadjunXu"
+ },
+ {
+  "artist": "Sertab Erener",
+  "title": "Mecbursun",
+  "year": 1994,
+  "spotify_id": "30P0bhT0Ebfl9Bxua0mzYr"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Hepsi Senin mi? (Şıkıdım)",
+  "year": 1994,
+  "spotify_id": "72QQfTR5KfRJbVxaDrSmWO"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Kış Güneşi",
+  "year": 1994,
+  "spotify_id": "1tiIKelgeYVi1KcylVnZdq"
+ },
+ {
+  "artist": "Yonca Evcimik",
+  "title": "Bandıra Bandıra",
+  "year": 1994,
+  "spotify_id": "4pxRvWXrkTJBymcV1wy8aK"
+ },
+ {
+  "artist": "Barış Manço",
+  "title": "Müsaadenizle Çocuklar",
+  "year": 1995,
+  "spotify_id": "4sQLH6KeyZz9LOAzctNIGJ"
+ },
+ {
+  "artist": "Bulutsuzluk Özlemi",
+  "title": "Güneye Giderken",
+  "year": 1995,
+  "spotify_id": "50riIDthWHWbu11FxqOcbb"
+ },
+ {
+  "artist": "Candan Erçetin",
+  "title": "Hazırım",
+  "year": 1995,
+  "spotify_id": "65qUkoAJunWF83uSiAozfD"
+ },
+ {
+  "artist": "Ferda Anıl Yarkın",
+  "title": "Sonuna Kadar",
+  "year": 1995,
+  "spotify_id": "4Y9k6dEC7RnbIMgKCD9PUm"
+ },
+ {
+  "artist": "MFÖ",
+  "title": "Mazeretim Var Asabiyim Ben",
+  "year": 1995,
+  "spotify_id": "5Ku52IUpK9kNRuzWBMYIaS"
+ },
+ {
+  "artist": "Mirkelam",
+  "title": "Her Gece",
+  "year": 1995,
+  "spotify_id": "0Wk7DHKAYGVJjgU7YAWCV0"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Onu Alma Beni Al",
+  "year": 1995,
+  "spotify_id": "3LQdQ2XVJ35xJLA7vjq7eR"
+ },
+ {
+  "artist": "Sibel Tüzün",
+  "title": "Kaçın Kurrası",
+  "year": 1995,
+  "spotify_id": "5PQwpKGb6bGHdVd4Ea1Qc0"
+ },
+ {
+  "artist": "Yıldız Tilbe",
+  "title": "Vazgeçtim",
+  "year": 1995,
+  "spotify_id": "411ymbMvXsqsq7gWmiCeZD"
+ },
+ {
+  "artist": "Çelik",
+  "title": "Dilberim",
+  "year": 1995,
+  "spotify_id": "1hmJp5SWAqzsm4mBYOCVyZ"
+ },
+ {
+  "artist": "Candan Erçetin",
+  "title": "Umrumda Değil",
+  "year": 1996,
+  "spotify_id": "5EwuEwhtKAmWFMm8cVuM9W"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Saz mı, Caz mı",
+  "year": 1996,
+  "spotify_id": "6yxxkCCtVjnKA3Loyn8WER"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Be Adam",
+  "year": 1996,
+  "spotify_id": "5R62yrYVMRZExYqxoPnQMn"
+ },
+ {
+  "artist": "Kenan Doğulu",
+  "title": "Kandırdım",
+  "year": 1996,
+  "spotify_id": "3tIrKa0ZuJrAX30UzqPVEW"
+ },
+ {
+  "artist": "Mustafa Sandal",
+  "title": "Jest Oldu",
+  "year": 1996,
+  "spotify_id": "78Pkg29xG0A9CtJe00NZUW"
+ },
+ {
+  "artist": "Niran Ünsal",
+  "title": "Beyaz Sevda",
+  "year": 1996,
+  "spotify_id": "4wmK48zZ99LDWuTUnTYrWX"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Seni Yerler",
+  "year": 1996,
+  "spotify_id": "0seHKl9cX6sRrgO5Ql28b4"
+ },
+ {
+  "artist": "Yaşar",
+  "title": "Kumralım",
+  "year": 1996,
+  "spotify_id": "3tCCD2qQLdC99YkRwGPSsx"
+ },
+ {
+  "artist": "Yaşar",
+  "title": "Divane",
+  "year": 1996,
+  "spotify_id": "3V9Cf4pENsRh02WTMJ726n"
+ },
+ {
+  "artist": "Özlem Tekin",
+  "title": "Laubali",
+  "year": 1996,
+  "spotify_id": "4hEuuKhZC8XolGSGhjRCqf"
+ },
+ {
+  "artist": "Şebnem Ferah",
+  "title": "Yağmurlar",
+  "year": 1996,
+  "spotify_id": "6xCPxUo1OHGQpaN3CMb7DN"
+ },
+ {
+  "artist": "Bülent Ersoy",
+  "title": "Maazallah",
+  "year": 1997,
+  "spotify_id": "11Daj3MiIxzwglZMQDc4XA"
+ },
+ {
+  "artist": "Doğuş",
+  "title": "Uyan",
+  "year": 1997,
+  "spotify_id": "3swvoQqlnwvOJOj8ZrWdja"
+ },
+ {
+  "artist": "Göksel",
+  "title": "Sabır",
+  "year": 1997,
+  "spotify_id": "3VsY8ODRtXZeyPKQ0htEHN"
+ },
+ {
+  "artist": "Mansur Ark",
+  "title": "Maalesef",
+  "year": 1997,
+  "spotify_id": "2Bn3E90Aq8yFcRJDpZdzCo"
+ },
+ {
+  "artist": "Nalan",
+  "title": "Yaralandım",
+  "year": 1997,
+  "spotify_id": "7lS4W2SVX3JeeSd5SRTyJu"
+ },
+ {
+  "artist": "Sibel Can",
+  "title": "Padişah",
+  "year": 1997,
+  "spotify_id": "7859Rvo6wXeImidBRL2dUZ"
+ },
+ {
   "artist": "Tarkan",
   "title": "Şımarık",
   "year": 1997,
   "spotify_id": "6vEL7E8TGzrxuxbrgdlkLL"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Ölürüm Sana",
+  "year": 1997,
+  "spotify_id": "6nAgxB5x7vlGVVIoWpCwaM"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Salına Salına Sinsice",
+  "year": 1997,
+  "spotify_id": "4PGsEvmwfJwNJJcsw9aaav"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "İnci Tanem",
+  "year": 1997,
+  "spotify_id": "3kBdY82CtGF2aDBGaNK0NP"
+ },
+ {
+  "artist": "Teoman",
+  "title": "Papatya",
+  "year": 1997,
+  "spotify_id": "1ziQ7lMpFlhyQ3TbkllmE2"
+ },
+ {
+  "artist": "Zeynep Dizdar",
+  "title": "Vazgeç Gönül",
+  "year": 1997,
+  "spotify_id": "4MH5lh1VQZfAXWFJFmPnKB"
+ },
+ {
+  "artist": "Ahmet Kaya",
+  "title": "Nereden Bileceksiniz",
+  "year": 1998,
+  "spotify_id": "1RMnFV3jidSADH1ZSF8EAr"
+ },
+ {
+  "artist": "Athena",
+  "title": "Senden, Benden, Bizden",
+  "year": 1998,
+  "spotify_id": "7BGAsqmzVtq0Ms8o0MegsQ"
+ },
+ {
+  "artist": "Athena",
+  "title": "Holigan",
+  "year": 1998,
+  "spotify_id": "0goKc2vm198SENAdmg0bdl"
+ },
+ {
+  "artist": "Mustafa Sandal",
+  "title": "Aya Benzer",
+  "year": 1998,
+  "spotify_id": "6T1F7KwvtxUIsZXmRXyv3X"
+ },
+ {
+  "artist": "Teoman",
+  "title": "Gemiler",
+  "year": 1998,
+  "spotify_id": "6RxF2qmsTBsXFgK0lx8WEj"
+ },
+ {
+  "artist": "Duman",
+  "title": "Köprüaltı",
+  "year": 1999,
+  "spotify_id": "43tIlj5mqSjV4DPuDRb5NQ"
+ },
+ {
+  "artist": "Ebru Gündeş",
+  "title": "Çingenem",
+  "year": 1999,
+  "spotify_id": "4zTOUtukd52LzS3bLWwzGc"
+ },
+ {
+  "artist": "Hakan Altun",
+  "title": "Bana Göresin",
+  "year": 1999,
+  "spotify_id": "3Xq3Gozb3Iq02reKbWIx0w"
+ },
+ {
+  "artist": "Kader",
+  "title": "Adamım",
+  "year": 1999,
+  "spotify_id": "2ZMY5U172NZyLrBOqrDevY"
+ },
+ {
+  "artist": "Serdar Ortaç",
+  "title": "Asrın Hatası",
+  "year": 1999,
+  "spotify_id": "6rvF2IijcQ4six3yG8d7cy"
+ },
+ {
+  "artist": "Sertab Erener",
+  "title": "Yanarım",
+  "year": 1999,
+  "spotify_id": "69dbmLAqR6BTHOvMpZ7XK3"
+ },
+ {
+  "artist": "Sertab Erener",
+  "title": "Zor Kadın",
+  "year": 1999,
+  "spotify_id": "792QVjxxjKC1rgEwHI2G2d"
+ },
+ {
+  "artist": "Vega",
+  "title": "Alışamadım Yokluğuna",
+  "year": 1999,
+  "spotify_id": "3FJIkYZLcZMXi7h7z509en"
+ },
+ {
+  "artist": "Yonca Lodi",
+  "title": "Sana Bir Şey Olmasın",
+  "year": 1999,
+  "spotify_id": "6mouvH9qWINATfpuMNytXH"
+ },
+ {
+  "artist": "Ümit Sayın",
+  "title": "Ben Tabii Ki",
+  "year": 1999,
+  "spotify_id": "7ssDqFuoNiVLu2vps3GL3b"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Yalanın Batsın",
+  "year": 2000,
+  "spotify_id": "0wyqLhwj5MlZeHjZqt3lq5"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Sarı Odalar",
+  "year": 2000,
+  "spotify_id": "3CPr8mAbqwHzPwuIaFJx1N"
+ },
+ {
+  "artist": "Teoman",
+  "title": "Paramparça",
+  "year": 2000,
+  "spotify_id": "0vWr52Zx9XHl3qOVefySzY"
+ },
+ {
+  "artist": "Teoman & Şebnem Ferah",
+  "title": "İki Yabancı",
+  "year": 2000,
+  "spotify_id": "2Eb9soohEouU73DZ5PA58j"
+ },
+ {
+  "artist": "Göksel",
+  "title": "Depresyondayım",
+  "year": 2001,
+  "spotify_id": "47MuBj8x7h6nrfZ0AxDqC8"
+ },
+ {
+  "artist": "Kenan Doğulu",
+  "title": "Tutamıyorum Zamanı",
+  "year": 2001,
+  "spotify_id": "5BQmSedOyNG47lwPZRF9am"
+ },
+ {
+  "artist": "Kıraç",
+  "title": "Endamın Yeter",
+  "year": 2001,
+  "spotify_id": "5n1MwdIRqFtsFO4qp86USa"
+ },
+ {
+  "artist": "Sertab Erener",
+  "title": "Kumsalda",
+  "year": 2001,
+  "spotify_id": "44P48IXl8neXU8K3YAKabd"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Kuzu Kuzu",
+  "year": 2001,
+  "spotify_id": "3ajYmPDtB3P7JTPQ64Dr7P"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Hüp",
+  "year": 2001,
+  "spotify_id": "0ZoWRdF0aj5nigXXJZFrNb"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Sen Başkasın",
+  "year": 2001,
+  "spotify_id": "0ZJKPGKFJQM9riXJ8TOyiO"
+ },
+ {
+  "artist": "Candan Erçetin",
+  "title": "Gamsız Hayat",
+  "year": 2002,
+  "spotify_id": "0MKjkTpnPt1OI1YFV1N1ZO"
+ },
+ {
+  "artist": "Duman",
+  "title": "Her Şeyi Yak",
+  "year": 2002,
+  "spotify_id": "4uqlFpMPTKO6uAsX6qvK0l"
+ },
+ {
+  "artist": "Duman",
+  "title": "Bu Akşam",
+  "year": 2002,
+  "spotify_id": "6jo5kjABNphNwXQ8ZyOLtZ"
+ },
+ {
+  "artist": "Mustafa Sandal",
+  "title": "Pazara Kadar",
+  "year": 2002,
+  "spotify_id": "6oFKnqoauHLoR2liTCp4Os"
+ },
+ {
+  "artist": "Vega",
+  "title": "Bu Sabahların Bir Anlamı Olmalı",
+  "year": 2002,
+  "spotify_id": "6uS2G7PdDL0qmYs6glOgrO"
+ },
+ {
+  "artist": "Çelik",
+  "title": "Sen Yoluna Ben Yoluma",
+  "year": 2002,
+  "spotify_id": "2xwPWqmlhRGDAt5GVfgR5q"
+ },
+ {
+  "artist": "Nazan Öncel",
+  "title": "Beni Hatırla",
+  "year": 2003,
+  "spotify_id": "4mwKj8jNSq8eTp3ylpcBAE"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Dudu",
+  "year": 2003,
+  "spotify_id": "15xj7p5uDk9sDnNbQtgZ8Y"
+ },
+ {
+  "artist": "Teoman",
+  "title": "Kupa Kızı ve Sinek Valesi",
+  "year": 2003,
+  "spotify_id": "68xnudIZzP49DreYAMlbqZ"
+ },
+ {
+  "artist": "Ceza & Sagopa Kajmer",
+  "title": "Neyim Var Ki",
+  "year": 2004,
+  "spotify_id": "09XOVDSIbBxBf6Kr1vGnHf"
+ },
+ {
+  "artist": "Demet Akalın",
+  "title": "Banane",
+  "year": 2004,
+  "spotify_id": "3CjnMljgviz35ADqiVNUlT"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Of Of",
+  "year": 2004,
+  "spotify_id": "7xFDR23YLmIhHn55Ad5gYp"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Kırmızı",
+  "year": 2004,
+  "spotify_id": "2pTVNLRAfud4odx8SSO6cY"
+ },
+ {
+  "artist": "Pamela",
+  "title": "İstanbul",
+  "year": 2004,
+  "spotify_id": "27sRogaIuUA9UteLoPcEDw"
+ },
+ {
+  "artist": "Tarık Mengüç",
+  "title": "Şak Şuka",
+  "year": 2004,
+  "spotify_id": "3ICmVJmidTUOM8E9ARefyF"
  },
  {
   "artist": "maNga",
@@ -24,9 +1062,741 @@
   "spotify_id": "397A58sUsAVNZlvriDmfl9"
  },
  {
+  "artist": "mor ve ötesi",
+  "title": "Bir Derdim Var",
+  "year": 2004,
+  "spotify_id": "5oecOcmSEHs7MZiB0NPbFu"
+ },
+ {
+  "artist": "mor ve ötesi",
+  "title": "Cambaz",
+  "year": 2004,
+  "spotify_id": "3ZkA3JnqluUWzwr64BBkl4"
+ },
+ {
+  "artist": "Duman",
+  "title": "Seni Kendime Sakladım",
+  "year": 2005,
+  "spotify_id": "4TjX6QIQVSD3j2VAxlR2wa"
+ },
+ {
+  "artist": "Hepsi",
+  "title": "Yalan",
+  "year": 2005,
+  "spotify_id": "18C6zrCifmpCBkuvAeOL4L"
+ },
+ {
+  "artist": "Seksendört",
+  "title": "Ölürüm Hasretinle",
+  "year": 2005,
+  "spotify_id": "6y3vkPoWtLtYSvTqHBKO4z"
+ },
+ {
+  "artist": "Yalın",
+  "title": "Keşke",
+  "year": 2005,
+  "spotify_id": "4g8phMgjFb2RecauuBJXmZ"
+ },
+ {
+  "artist": "Şebnem Ferah",
+  "title": "Çakıl Taşları",
+  "year": 2005,
+  "spotify_id": "03sf6gnuqZNE9sGrRi8WAc"
+ },
+ {
+  "artist": "Emre Aydın",
+  "title": "Afili Yalnızlık",
+  "year": 2006,
+  "spotify_id": "154DPZSqgJ958y0d33MfPi"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Ne Kavgam Bitti Ne Sevdam",
+  "year": 2006,
+  "spotify_id": "5QWJgdaZ95c41wb8ZjaZ6K"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Kelepçe",
+  "year": 2006,
+  "spotify_id": "1QUKFP4OXvdpm0ZgkDIHwB"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Aşkın Ateşi",
+  "year": 2006,
+  "spotify_id": "3sgBQybW08n0CzVmkOEtAp"
+ },
+ {
+  "artist": "Hepsi",
+  "title": "Kalpsizsin",
+  "year": 2006,
+  "spotify_id": "7L1e4zs7ZtFW4CU9lxtWV5"
+ },
+ {
+  "artist": "Kenan Doğulu",
+  "title": "Çakkıdı",
+  "year": 2006,
+  "spotify_id": "1jH3jM3CqPmZcX7gzVPLHb"
+ },
+ {
+  "artist": "Murat Boz",
+  "title": "Aşkı Bulamam Ben",
+  "year": 2006,
+  "spotify_id": "4YGoYeshftVaDxk4Cl9pYa"
+ },
+ {
+  "artist": "Nil Karaibrahimgil & Ayben",
+  "title": "Peri",
+  "year": 2006,
+  "spotify_id": "3i9VQ6lmQe6Tms9fdxUigO"
+ },
+ {
+  "artist": "Pinhani",
+  "title": "Hele Bi Gel",
+  "year": 2006,
+  "spotify_id": "5nuGiGWV1tGsLYqi0Y8RmZ"
+ },
+ {
+  "artist": "Serdar Ortaç",
+  "title": "Dansöz",
+  "year": 2006,
+  "spotify_id": "0ry1DcOVebPl6QMQQnY3Dr"
+ },
+ {
+  "artist": "maNga & Göksel",
+  "title": "Dursun Zaman",
+  "year": 2006,
+  "spotify_id": "110lLYj8VghNryOewSj15h"
+ },
+ {
+  "artist": "Ceza",
+  "title": "Yerli Plaka",
+  "year": 2007,
+  "spotify_id": "6qLGmqg7yfTVotHvxVClZ8"
+ },
+ {
+  "artist": "Gripin",
+  "title": "Böyle Kahpedir Dünya",
+  "year": 2007,
+  "spotify_id": "5VFasLYUqKVUymkLK6L6AG"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Romeo",
+  "year": 2007,
+  "spotify_id": "05fl9eOSX7KfcNbnauOUmT"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Aynen Öyle",
+  "year": 2008,
+  "spotify_id": "7f3FiIfoZG67tddAGdGowu"
+ },
+ {
+  "artist": "Demet Akalın",
+  "title": "Bebek",
+  "year": 2008,
+  "spotify_id": "76sziwDzTzVmk4HPBUmRWL"
+ },
+ {
+  "artist": "Ferhat Göçer",
+  "title": "Biri Bana Gelsin",
+  "year": 2008,
+  "spotify_id": "1b5iNCvJzcTgTXcUmZaUb3"
+ },
+ {
+  "artist": "mor ve ötesi",
+  "title": "Deli",
+  "year": 2008,
+  "spotify_id": "3eEmeP2ydpJDtl0tY91t8Y"
+ },
+ {
+  "artist": "İsmail YK",
+  "title": "Bas Gaza",
+  "year": 2008,
+  "spotify_id": "0EXKIM7dUZ2EN3cuQ1G8BK"
+ },
+ {
+  "artist": "Demet Akalın",
+  "title": "Toz Pembe",
+  "year": 2009,
+  "spotify_id": "49j2azxeW8yqDAR1rWBNla"
+ },
+ {
+  "artist": "Funda Arar",
+  "title": "Yak Gel",
+  "year": 2009,
+  "spotify_id": "7ohxCJuCDwDn7DyNmKveE8"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Dillere Düşeceğiz Seninle",
+  "year": 2009,
+  "spotify_id": "1QuL5ALIuQ6djrKNT7BXy2"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Ezberbozan",
+  "year": 2009,
+  "spotify_id": "4CzKBO7d7Sft3oZbeQLLde"
+ },
+ {
+  "artist": "Hadise",
+  "title": "Evlenmeliyiz",
+  "year": 2009,
+  "spotify_id": "0kaKXWNv1Fd8buBpcd8W3I"
+ },
+ {
+  "artist": "Atiye",
+  "title": "Salla",
+  "year": 2010,
+  "spotify_id": "04Aq0PDoKzXkNvW0suggOt"
+ },
+ {
+  "artist": "Atiye & Teoman",
+  "title": "Kal",
+  "year": 2010,
+  "spotify_id": "7jBf2bHHVJ7a6GdrlcxbJ5"
+ },
+ {
+  "artist": "Duman",
+  "title": "Senden Daha Güzel",
+  "year": 2010,
+  "spotify_id": "2sLAykCWyB1VA5hXDjU59T"
+ },
+ {
+  "artist": "Emre Aydın",
+  "title": "Hoşçakal",
+  "year": 2010,
+  "spotify_id": "4NgBpiVDCdDvpiV92QIekx"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Bodrum",
+  "year": 2010,
+  "spotify_id": "2yZhYOrX9ukmcyfIjGYx9O"
+ },
+ {
+  "artist": "Serdar Ortaç",
+  "title": "Poşet",
+  "year": 2010,
+  "spotify_id": "0PlABPqYHKhlhTgGbHWuMr"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Sevişmeden Uyumayalım",
+  "year": 2010,
+  "spotify_id": "5FWt4kjAGU6nKAVIRh14Hx"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Yara Bende",
+  "year": 2010,
+  "spotify_id": "7KVLOazYiLgcfnJQL5SWaJ"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Boş Yere",
+  "year": 2010,
+  "spotify_id": "2gZeqcysy8j1FrrBUVdIb8"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Öp",
+  "year": 2010,
+  "spotify_id": "0OFivfe4fC4QR20TzMVbfM"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Adımı Kalbine Yaz",
+  "year": 2010,
+  "spotify_id": "4gXX2ayvtMf4Tc5DCSHFTH"
+ },
+ {
+  "artist": "Ajda Pekkan",
+  "title": "Yakar Geçerim",
+  "year": 2011,
+  "spotify_id": "41EfGbF3T66mbR67xvNYvm"
+ },
+ {
+  "artist": "Can Bonomo",
+  "title": "Meczup",
+  "year": 2011,
+  "spotify_id": "0yki8SRGIYPbhaCxAu0gHT"
+ },
+ {
+  "artist": "Hadise",
+  "title": "Aşk Kaç Beden Giyer",
+  "year": 2011,
+  "spotify_id": "3sddjz6uEaCJP84fFfS5s5"
+ },
+ {
+  "artist": "Model",
+  "title": "Pembe Mezarlık",
+  "year": 2011,
+  "spotify_id": "1cwth5tNynCfH2ZYCmShDc"
+ },
+ {
+  "artist": "Murat Boz",
+  "title": "Kalamam Arkadaş",
+  "year": 2011,
+  "spotify_id": "2DG2lvAjiZ3XAFlklIdYPd"
+ },
+ {
+  "artist": "Murat Boz",
+  "title": "Aşklarım Büyük Benden",
+  "year": 2011,
+  "spotify_id": "6YCD3AQzafDn3PhzbXEYf1"
+ },
+ {
+  "artist": "Murat Dalkılıç",
+  "title": "La Fontaine",
+  "year": 2011,
+  "spotify_id": "3EXfLVsOsULokA3k87BOIe"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Unuttun mu Beni",
+  "year": 2011,
+  "spotify_id": "0x9154bA7PgqF6Za1CtszP"
+ },
+ {
+  "artist": "Demet Akalın",
+  "title": "Türkan",
+  "year": 2012,
+  "spotify_id": "0xwPjduuMeGTGxiFP4DqjY"
+ },
+ {
+  "artist": "Fettah Can",
+  "title": "Boş Bardak",
+  "year": 2012,
+  "spotify_id": "2fFoXj2aUlaezPp3SinfSD"
+ },
+ {
+  "artist": "Hande Yener",
+  "title": "Acı Veriyor",
+  "year": 2012,
+  "spotify_id": "7LN2CCgK29n5iv3v37jaab"
+ },
+ {
+  "artist": "Kenan Doğulu",
+  "title": "Şans Meleğim",
+  "year": 2012,
+  "spotify_id": "0YUCEubKOccZGuCWABCH0E"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Vaziyetler",
+  "year": 2012,
+  "spotify_id": "5voZKuwzMtKxp4Vkgc7kdY"
+ },
+ {
+  "artist": "mor ve ötesi",
+  "title": "Oyunbozan",
+  "year": 2012,
+  "spotify_id": "4Po5JZuDOXRGHFt0Uhwn80"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Yatcaz Kalkcaz Ordayım",
+  "year": 2013,
+  "spotify_id": "2tmLY3JS7JpSo456P9hfiH"
+ },
+ {
+  "artist": "Sagopa Kajmer",
+  "title": "Baytar",
+  "year": 2013,
+  "spotify_id": "6iWvJmp3gA8DxTuN4BSECB"
+ },
+ {
+  "artist": "Sinan Akçıl",
+  "title": "Tabi Tabi",
+  "year": 2014,
+  "spotify_id": "7IGM6xSqkGQRBxcdIhEkar"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Saki",
+  "year": 2014,
+  "spotify_id": "49QLsKe0brkbWHK7GKTGHf"
+ },
+ {
+  "artist": "İrem Derici",
+  "title": "Kalbimin Tek Sahibine",
+  "year": 2014,
+  "spotify_id": "2s84uRN09uvUJZL0OsW8oL"
+ },
+ {
+  "artist": "Ece Seçkin",
+  "title": "Aman Aman",
+  "year": 2015,
+  "spotify_id": "4eAtZgGOOuzn4Djo2g8E8x"
+ },
+ {
+  "artist": "Göksel",
+  "title": "Sen Orda Yoksun",
+  "year": 2015,
+  "spotify_id": "0xB1twgXnL1hEwLRWdRUIe"
+ },
+ {
+  "artist": "Gülşen",
+  "title": "Bangır Bangır",
+  "year": 2015,
+  "spotify_id": "73DhXPWV5NsxRSe0qy26TR"
+ },
+ {
+  "artist": "Hande Yener & Serdar Ortaç",
+  "title": "İki Deli",
+  "year": 2015,
+  "spotify_id": "0DugZtHY7vxoRxL9IPqcEu"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Gel",
+  "year": 2015,
+  "spotify_id": "0OGpY82sToZSrrDgk4Iuic"
+ },
+ {
+  "artist": "Simge",
+  "title": "Miş Miş",
+  "year": 2015,
+  "spotify_id": "3Gr6bwxTHtS3KaDUfT2CFB"
+ },
+ {
+  "artist": "Adamlar",
+  "title": "Rüyalarda Buruşmuşum",
+  "year": 2016,
+  "spotify_id": "4cQSOn9oP0MiM7BgiRngFk"
+ },
+ {
+  "artist": "Edis",
+  "title": "Dudak",
+  "year": 2016,
+  "spotify_id": "6rWID4G0g3vGL4YGp7f2h6"
+ },
+ {
+  "artist": "Emrah Karaduman & Aleyna Tilki",
+  "title": "Cevapsız Çınlama",
+  "year": 2016,
+  "spotify_id": "64Rq8DjhO6l6meQjNJuRQF"
+ },
+ {
+  "artist": "Murat Boz",
+  "title": "Gün Ağardı",
+  "year": 2016,
+  "spotify_id": "7KglDqFffEIOzF1mkx1N0o"
+ },
+ {
+  "artist": "Murat Boz",
+  "title": "Janti",
+  "year": 2016,
+  "spotify_id": "6DHXEFiovFZgQAhuviC6QS"
+ },
+ {
+  "artist": "Simge",
+  "title": "Yankı",
+  "year": 2016,
+  "spotify_id": "4y3QBJf9E8yDJCEFbRK8xk"
+ },
+ {
+  "artist": "Sıla",
+  "title": "Yan Benimle",
+  "year": 2016,
+  "spotify_id": "2LX6XfSqCKBrt2qJngS87z"
+ },
+ {
+  "artist": "Aleyna Tilki",
+  "title": "Sen Olsan Bari",
+  "year": 2017,
+  "spotify_id": "5ExsZq3AmQGxavPJOzf0M5"
+ },
+ {
+  "artist": "Deeperise & Jabbar",
+  "title": "Raf",
+  "year": 2017,
+  "spotify_id": "1jStctxoCQu67sVWxzatLC"
+ },
+ {
+  "artist": "Ezhel",
+  "title": "Geceler",
+  "year": 2017,
+  "spotify_id": "0R0o8uOkDz40XsR6uwThfQ"
+ },
+ {
+  "artist": "Gazapizm",
+  "title": "Heyecanı Yok",
+  "year": 2017,
+  "spotify_id": "4pZiksfH69OLW1BLGBzeM2"
+ },
+ {
+  "artist": "Kalben",
+  "title": "Yara",
+  "year": 2017,
+  "spotify_id": "1IquNFg2RRH1CLRAHNVgQ9"
+ },
+ {
+  "artist": "Oğuzhan Koç",
+  "title": "Vermem Seni Ellere",
+  "year": 2017,
+  "spotify_id": "5m0xKFMim80XzJ1HM0IBwW"
+ },
+ {
+  "artist": "Sezen Aksu",
+  "title": "Manifesto",
+  "year": 2017,
+  "spotify_id": "2MLxpHtqNLlUmXTkVXai6w"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Yolla",
+  "year": 2017,
+  "spotify_id": "1vZAYNFTcxzrnooQUw5zKD"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Beni Çok Sev",
+  "year": 2017,
+  "spotify_id": "0uyWiTVblh6pV6JQlIe72e"
+ },
+ {
+  "artist": "Buray",
+  "title": "Tac Mahal",
+  "year": 2018,
+  "spotify_id": "26uHtSrQXUad9uCqxPiIXJ"
+ },
+ {
+  "artist": "Edis",
+  "title": "Çok Çok",
+  "year": 2018,
+  "spotify_id": "4UajeO5lnxguN9RNutaT5D"
+ },
+ {
+  "artist": "Gökhan Türkmen",
+  "title": "Bitmesin",
+  "year": 2018,
+  "spotify_id": "3MHL0Nb0cLfJN4xHpWFNJR"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Öyle Kolaysa",
+  "year": 2018,
+  "spotify_id": "4FGYzQqH2i1E3OtuMydnzY"
+ },
+ {
+  "artist": "Melike Şahin",
+  "title": "Tutuşmuş Beraber",
+  "year": 2018,
+  "spotify_id": "0ELKA403grwyEZLPMzJRKs"
+ },
+ {
+  "artist": "Yüzyüzeyken Konuşuruz",
+  "title": "Dinle Beni Bi'",
+  "year": 2018,
+  "spotify_id": "11PO9iu6PtpgL1JK4QNUEJ"
+ },
+ {
+  "artist": "Ben Fero",
+  "title": "Mahallemiz Esmer",
+  "year": 2019,
+  "spotify_id": "3qOxkhNytyb6ifxNzxxULn"
+ },
+ {
+  "artist": "Ezhel",
+  "title": "Felaket",
+  "year": 2019,
+  "spotify_id": "5vJTUmbKFvFMcirWag0XJD"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Gözlerine",
+  "year": 2019,
+  "spotify_id": "4MbZZG6KCC6QaUByvs9vmA"
+ },
+ {
+  "artist": "Murda & Ezhel",
+  "title": "AYA",
+  "year": 2019,
+  "spotify_id": "3LHlFTXgkJLdQJ4RITnDIb"
+ },
+ {
+  "artist": "Zeynep Bastık",
+  "title": "Her Yerde Sen",
+  "year": 2019,
+  "spotify_id": "1L8breHwaAapLwp7tcIPF9"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Toy",
+  "year": 2020,
+  "spotify_id": "3JHzYXarT3Y3Fta58XNuXD"
+ },
+ {
+  "artist": "Murda & Ezhel",
+  "title": "Made In Turkey",
+  "year": 2020,
+  "spotify_id": "3W4seDHEWHR35WuKZOP1Yq"
+ },
+ {
+  "artist": "Reynmen",
+  "title": "Leila",
+  "year": 2020,
+  "spotify_id": "1RqNAiL2toZ59HTjQbFLfM"
+ },
+ {
+  "artist": "UZI",
+  "title": "Makina",
+  "year": 2020,
+  "spotify_id": "2huQiKGkgUfp4WjnVRSobL"
+ },
+ {
+  "artist": "Bora Duran",
+  "title": "Döndüm",
+  "year": 2021,
+  "spotify_id": "2pc1hu3tfc90Ito191MM9J"
+ },
+ {
+  "artist": "Edis",
+  "title": "Martılar",
+  "year": 2021,
+  "spotify_id": "1xEpgyKx4ZHtefFAh0SmU5"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Kahrettim",
+  "year": 2021,
+  "spotify_id": "6oSiqvaLNJk8PWF9G7jGh8"
+ },
+ {
+  "artist": "Mark Eliyahu & Cem Adrian",
+  "title": "Derinlerde",
+  "year": 2021,
+  "spotify_id": "15Wl8jVyU8t3tuFJHEFcCw"
+ },
+ {
+  "artist": "Sefo",
+  "title": "Bilmem Mi?",
+  "year": 2021,
+  "spotify_id": "5BQGKDekRGPXtEVWOgBokr"
+ },
+ {
+  "artist": "Dedublüman & Mavzer Tabancas",
+  "title": "Belki",
+  "year": 2022,
+  "spotify_id": "5ATwkalJ9FnLp7Zcvxo1rl"
+ },
+ {
   "artist": "Mert Demir & Mabel Matiz",
   "title": "Antidepresan",
   "year": 2022,
   "spotify_id": "4OH5Cd8ZOI1eSgJSC9PYmU"
+ },
+ {
+  "artist": "Tarkan",
+  "title": "Geççek",
+  "year": 2022,
+  "spotify_id": "7qT1uoiwvXEHSjaiHbw0n1"
+ },
+ {
+  "artist": "Mert Demir",
+  "title": "Ateşe Düştüm",
+  "year": 2023,
+  "spotify_id": "3auN910HHNYykQo8i9q5J1"
+ },
+ {
+  "artist": "Semicenk, Doğu Swag & Büken",
+  "title": "Pişman Değilim",
+  "year": 2023,
+  "spotify_id": "4Sdj67b8WF9PhAXh4tvBi6"
+ },
+ {
+  "artist": "Semicenk & Büken",
+  "title": "Çıkmaz Bir Sokakta",
+  "year": 2025,
+  "spotify_id": "4SJjMPowhsrYSWgxM61yxm"
+ },
+ {
+  "artist": "Ahiyan",
+  "title": "Kralın Kızı",
+  "year": 2026,
+  "spotify_id": "4nCjL15kmLv68gO5Cvvgnz"
+ },
+ {
+  "artist": "Aykut Aksöz",
+  "title": "Yüreğime mi Sorsam?",
+  "year": 2026,
+  "spotify_id": "0wwJSut39s3Obzvjti9m8X"
+ },
+ {
+  "artist": "BLOK3",
+  "title": "Sebebi Yar",
+  "year": 2026,
+  "spotify_id": "1gd1TicErR4bwjR3CYxyra"
+ },
+ {
+  "artist": "BLOK3",
+  "title": "Kayıp Kalp",
+  "year": 2026,
+  "spotify_id": "3H4aYDeSswC31fSOWJtWdg"
+ },
+ {
+  "artist": "Burak Bulut & İrem Derici",
+  "title": "Garson",
+  "year": 2026,
+  "spotify_id": "2rWiGPqi1ECjYummm6o6hs"
+ },
+ {
+  "artist": "CRUSH",
+  "title": "Benim Olsana",
+  "year": 2026,
+  "spotify_id": "5PW7h2o6qYWUmwAultwZdf"
+ },
+ {
+  "artist": "Emir Can İğrek",
+  "title": "Geçmiş Geçmişte",
+  "year": 2026,
+  "spotify_id": "1uqJRzjN2AOwAkT2sBO3Xv"
+ },
+ {
+  "artist": "Eypio",
+  "title": "Şahidim",
+  "year": 2026,
+  "spotify_id": "3xnGK6EsiHUrDdHqjrbDC3"
+ },
+ {
+  "artist": "Ezhel",
+  "title": "Bana Ne Bu Sevdalardan",
+  "year": 2026,
+  "spotify_id": "5j7ypeN8HkyGKRNjRagPrR"
+ },
+ {
+  "artist": "Mabel Matiz",
+  "title": "Umrumdışı",
+  "year": 2026,
+  "spotify_id": "14xSndBPmB5bsYmKbwkhnB"
+ },
+ {
+  "artist": "Motive",
+  "title": "YIN YANG",
+  "year": 2026,
+  "spotify_id": "1hvPVRogJLyumymUkWivXx"
+ },
+ {
+  "artist": "Zeki Arkun",
+  "title": "Ayrılıyoruz",
+  "year": 2026,
+  "spotify_id": "1QFkEeBqQXP1naUsu85bYI"
+ },
+ {
+  "artist": "manifest",
+  "title": "TRALALA",
+  "year": 2026,
+  "spotify_id": "6hPPwiXH4Y4kmc121v9Fdg"
+ },
+ {
+  "artist": "manifest & Ajda Pekkan",
+  "title": "Hileli",
+  "year": 2026,
+  "spotify_id": "4eBE6hpwm7aJxIY4iwgwU8"
  }
 ]
