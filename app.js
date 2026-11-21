@@ -135,11 +135,13 @@
   // Ekrandaki süre ve durum, Spotify'ın gerçek çalma durumundan (GET /me/player) beslenir.
   let current = null, isPlaying = false, ended = false, timeUp = false;
   let progressMs = 0, lastSync = 0, tickInt = null, pollInt = null, wakeLock = null, noDevice = false;
+  let aliases = new Set(), knownDuration = 0, playStartedAt = 0;
 
   async function play(trackId) {
     current = trackId; noDevice = false;
     stopLoops();
     ended = false; timeUp = false; isPlaying = false; progressMs = 0;
+    aliases = new Set(); knownDuration = 0; playStartedAt = Date.now();
     $("play-status").textContent = "Başlatılıyor…"; $("timer").textContent = "0:00";
     show("playing");
     try {
@@ -148,7 +150,7 @@
       if (!dev) throw Object.assign(new Error(), { reason: "NO_ACTIVE_DEVICE" });
       await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
       $("play-device").textContent = "🔊 " + dev.name;
-      isPlaying = true; lastSync = Date.now();
+      isPlaying = true; lastSync = Date.now(); playStartedAt = Date.now();
       startLoops(); setUI();
     } catch (e) {
       if (e.code === "LOGIN") return;
@@ -196,17 +198,30 @@
   }
 
   // Spotify'daki gerçek durumu oku: dışarıdan duraklatma, şarkının bitmesi, başka şarkıya geçme
+  // Spotify'ın gerçek durumunu oku: dışarıdan duraklatma, şarkının bitmesi.
+  // Not: Spotify bir şarkıyı ülkede çalamadığında aynı şarkının başka kimlikli
+  // bir kopyasını çalar (track relinking). Bu yüzden farklı kimlik görmek tek
+  // başına "şarkı bitti" demek değildir.
   async function sync() {
     if (document.hidden || $("screen-playing").hidden || !current || ended) return;
     let st;
-    try { st = await api("GET", "/me/player"); } catch { return; }
+    try { st = await api("GET", "/me/player?market=from_token"); } catch { return; }
     if (!st || !st.item) { if (isPlaying) { progressMs = nowProgress(); isPlaying = false; } return setUI(); }
-    if (st.item.id !== current) {
-      // şarkı bitti ve Spotify kendi önerisine geçti: durdur
-      ended = true; isPlaying = false; progressMs = st.item.duration_ms || progressMs;
-      api("PUT", "/me/player/pause").catch(() => {});
-      return setUI();
+    const it = st.item;
+    const matches = it.id === current || (it.linked_from && it.linked_from.id === current) || aliases.has(it.id);
+    if (!matches) {
+      const sinceStart = Date.now() - playStartedAt;
+      if (sinceStart < 4000) return;                       // Spotify henüz eski şarkıyı bildiriyor olabilir
+      const nearEnd = knownDuration && nowProgress() >= knownDuration - 10000;
+      if (nearEnd) {
+        // şarkı gerçekten bitti ve Spotify kendi önerisine geçti: durdur
+        ended = true; isPlaying = false; progressMs = knownDuration;
+        api("PUT", "/me/player/pause").catch(() => {});
+        return setUI();
+      }
+      aliases.add(it.id);                                  // aynı şarkının başka kopyası: devam et
     }
+    if (it.duration_ms) knownDuration = it.duration_ms;
     const prev = nowProgress();
     if (!st.is_playing && st.progress_ms === 0 && prev > 5000) { ended = true; isPlaying = false; return setUI(); }
     if (timeUp && st.is_playing) timeUp = false;
