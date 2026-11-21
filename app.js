@@ -136,19 +136,46 @@
   let current = null, isPlaying = false, ended = false, timeUp = false;
   let progressMs = 0, lastSync = 0, tickInt = null, pollInt = null, wakeLock = null, noDevice = false;
   let aliases = new Set(), knownDuration = 0, playStartedAt = 0;
+  let lastDeviceId = null, holding = false, limitOff = false;
+  // iPhone'da Spotify duraklatılıp arka planda beklerse iOS onu askıya alır ve
+  // cihaz listesinden düşer. Bu yüzden "durdurmak" yerine sessiz bir parça çalarız.
+  const SILENCE = ["spotify:track:0XycH5D4znCfJIBeYt3upG", "spotify:track:6gWSdJ0JS8hPUrKDUrgEwj"];
+  async function hold() {
+    holding = true;
+    try {
+      await api("PUT", "/me/player/play" + (lastDeviceId ? "?device_id=" + encodeURIComponent(lastDeviceId) : ""), { uris: SILENCE });
+    } catch (e) {
+      try { await api("PUT", "/me/player/pause"); } catch {}
+    }
+  }
 
   async function play(trackId) {
     current = trackId; noDevice = false;
     stopLoops();
     ended = false; timeUp = false; isPlaying = false; progressMs = 0;
-    aliases = new Set(); knownDuration = 0; playStartedAt = Date.now();
+    aliases = new Set(); knownDuration = 0; playStartedAt = Date.now(); limitOff = false;
     $("play-status").textContent = "Başlatılıyor…"; $("timer").textContent = "0:00";
     show("playing");
     try {
-      const devices = await getDevices();
-      const dev = pickDevice(devices);
-      if (!dev) throw Object.assign(new Error(), { reason: "NO_ACTIVE_DEVICE" });
-      await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
+      holding = false;
+      let devices = await getDevices();
+      let dev = pickDevice(devices);
+      if (!dev && lastDeviceId) {
+        // cihaz bir an listeden düşmüş olabilir: son cihaza aktarmayı dene
+        try { await api("PUT", "/me/player", { device_ids: [lastDeviceId], play: false }); } catch {}
+        await new Promise((r) => setTimeout(r, 1200));
+        devices = await getDevices(); dev = pickDevice(devices);
+      }
+      if (!dev) throw Object.assign(new Error("cihaz listesi boş"), { reason: "NO_ACTIVE_DEVICE", devs: devices.length });
+      try {
+        await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
+      } catch (err) {
+        if (err.status !== 404) throw err;
+        try { await api("PUT", "/me/player", { device_ids: [dev.id], play: false }); } catch {}
+        await new Promise((r) => setTimeout(r, 1200));
+        await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
+      }
+      lastDeviceId = dev.id;
       $("play-device").textContent = "🔊 " + dev.name;
       isPlaying = true; lastSync = Date.now(); playStartedAt = Date.now();
       startLoops(); setUI();
@@ -156,7 +183,8 @@
       if (e.code === "LOGIN") return;
       if (e.reason === "NO_ACTIVE_DEVICE" || e.status === 404) {
         noDevice = true;
-        fail("Spotify kapalı görünüyor", "Aşağıdaki butonla Spotify'ı aç, sonra Trster'a geri dön. Şarkı kendiliğinden başlayacak.", true);
+        fail("Spotify kapalı görünüyor", "Aşağıdaki butonla Spotify'ı aç, sonra Trster'a geri dön. Şarkı kendiliğinden başlayacak.", true,
+          "Spotify cevabı: " + (e.status || "-") + " " + (e.reason || "") + " " + (e.message || "") + (e.devs != null ? " · cihaz sayısı " + e.devs : ""));
       } else if (e.reason === "PREMIUM_REQUIRED" || e.status === 403) {
         fail("Premium gerekiyor", "Spotify şarkıyı tam çalmak için Premium hesap istiyor. Hesabının Premium olduğundan ve bu uygulamaya izin verilen kullanıcılar arasında olduğundan emin ol.");
       } else {
@@ -182,9 +210,9 @@
   function startLoops() {
     tickInt = setInterval(() => {
       const lim = +LS.get("autoStop", 0);
-      if (lim && isPlaying && !timeUp && nowProgress() >= lim * 1000) {
+      if (lim && !limitOff && isPlaying && !timeUp && nowProgress() >= lim * 1000) {
         timeUp = true; progressMs = nowProgress(); isPlaying = false;
-        api("PUT", "/me/player/pause").catch(() => {});
+        hold();
       }
       setUI();
     }, 250);
@@ -203,7 +231,7 @@
   // bir kopyasını çalar (track relinking). Bu yüzden farklı kimlik görmek tek
   // başına "şarkı bitti" demek değildir.
   async function sync() {
-    if (document.hidden || $("screen-playing").hidden || !current || ended) return;
+    if (document.hidden || $("screen-playing").hidden || !current || ended || holding) return;
     let st;
     try { st = await api("GET", "/me/player?market=from_token"); } catch { return; }
     if (!st || !st.item) { if (isPlaying) { progressMs = nowProgress(); isPlaying = false; } return setUI(); }
@@ -216,7 +244,7 @@
       if (nearEnd) {
         // şarkı gerçekten bitti ve Spotify kendi önerisine geçti: durdur
         ended = true; isPlaying = false; progressMs = knownDuration;
-        api("PUT", "/me/player/pause").catch(() => {});
+        hold();
         return setUI();
       }
       aliases.add(it.id);                                  // aynı şarkının başka kopyası: devam et
@@ -234,17 +262,25 @@
       if (ended) return play(current);
       if (isPlaying) {
         progressMs = nowProgress(); isPlaying = false; setUI();
-        await api("PUT", "/me/player/pause");
+        await hold();
       } else {
+        if (timeUp) limitOff = true;   // süre dolduktan sonra 'Devam' = şarkı sonuna kadar çalsın
         timeUp = false; isPlaying = true; lastSync = Date.now(); setUI();
-        await api("PUT", "/me/player/play");
+        if (holding) {
+          // sessiz parçadan kartın şarkısına, kaldığı yerden dön
+          holding = false; playStartedAt = Date.now();
+          await api("PUT", "/me/player/play" + (lastDeviceId ? "?device_id=" + encodeURIComponent(lastDeviceId) : ""),
+            { uris: ["spotify:track:" + current], position_ms: Math.max(0, Math.floor(progressMs)) });
+        } else {
+          await api("PUT", "/me/player/play");
+        }
       }
     } catch (e) { sync(); }
   }
 
   // Sayfa kapanırken / arka plana geçerken çalmayı durdur (sayfa kapansa da istek gitsin diye keepalive)
   function pauseOnLeave() {
-    if ($("screen-playing").hidden || !isPlaying) return;
+    if ($("screen-playing").hidden || (!isPlaying && !holding)) return;
     const t = LS.get("token");
     if (!t || Date.now() >= t.exp) return;
     progressMs = nowProgress(); isPlaying = false;
@@ -260,7 +296,7 @@
   async function next() {
     stopLoops();
     if (mode === "cardless") return playRandom();
-    if (isPlaying) api("PUT", "/me/player/pause").catch(() => {});
+    if (!holding) hold();
     isPlaying = false;
     startScan();
   }
@@ -335,7 +371,7 @@
       setMode("cardless");
       playRandom();
     } else {
-      if (!$("screen-playing").hidden && isPlaying) api("PUT", "/me/player/pause").catch(() => {});
+      if (!$("screen-playing").hidden && !holding) hold();
       isPlaying = false;
       setMode("cards");
       show(LS.get("token") ? "ready" : "login");
@@ -396,9 +432,10 @@
 
   // ---------- hata ----------
   let retryFn = null;
-  function fail(title, text, spotifyBtn = false) {
+  function fail(title, text, spotifyBtn = false, detail = "") {
     stopScan();
     $("err-title").textContent = title; $("err-text").textContent = text;
+    $("err-detail").textContent = detail; $("err-detail").hidden = !detail;
     $("btn-open-spotify").hidden = !spotifyBtn;
     $("btn-open-spotify").className = "btn " + (spotifyBtn ? "primary" : "ghost");
     $("btn-retry").className = "btn " + (spotifyBtn ? "ghost" : "primary");
