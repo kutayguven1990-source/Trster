@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Trster">
+  <title>Trster</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rings" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <header class="top">
+    <div class="logo">Trster</div>
+    <button class="icon-btn" id="btn-settings" aria-label="Ayarlar">⚙︎</button>
+  </header>
+
+  <main>
+    <!-- Giriş -->
+    <section class="screen" id="screen-login" hidden>
+      <h1>Kartı tara,<br>şarkıyı tahmin et.</h1>
+      <p class="muted">Şarkılar Spotify'dan tam olarak çalar. Oyunu yöneten kişinin <b>Spotify Premium</b> hesabı ve telefonunda Spotify uygulaması olmalı.</p>
+      <button class="btn primary" id="btn-login">Spotify ile bağlan</button>
+    </section>
+
+    <!-- Hazır -->
+    <section class="screen" id="screen-ready" hidden>
+      <h1>Hazır!</h1>
+      <p class="muted" id="device-line">Çalma cihazı: otomatik</p>
+      <button class="btn primary big" id="btn-scan">Kart tara</button>
+      <p class="hint">İpucu: Telefonun Spotify uygulamasını bir kez açık bırak, sonra buraya dön.</p>
+    </section>
+
+    <!-- Tarama -->
+    <section class="screen" id="screen-scan" hidden>
+      <div class="cam-wrap">
+        <video id="video" playsinline muted></video>
+        <div class="cam-frame"></div>
+      </div>
+      <p class="muted center">Kartın QR kodunu çerçeveye tut</p>
+      <button class="btn ghost" id="btn-cancel-scan">Vazgeç</button>
+    </section>
+
+    <!-- Çalıyor -->
+    <section class="screen" id="screen-playing" hidden>
+      <div class="pulse"><span id="timer">0:00</span></div>
+      <h2 id="play-status">Çalıyor…</h2>
+      <p class="muted center">Telefonu ters çevir ya da kimseye gösterme 😉</p>
+      <div class="row">
+        <button class="btn ghost" id="btn-toggle">Duraklat</button>
+        <button class="btn primary" id="btn-next">Sonraki kart</button>
+      </div>
+    </section>
+
+    <!-- Hata / cihaz yok -->
+    <section class="screen" id="screen-error" hidden>
+      <h2 id="err-title">Bir sorun oldu</h2>
+      <p class="muted" id="err-text"></p>
+      <a class="btn ghost" id="btn-open-spotify" href="spotify:" hidden>Spotify'ı aç</a>
+      <button class="btn primary" id="btn-retry">Tekrar dene</button>
+      <button class="btn ghost" id="btn-back">Geri</button>
+    </section>
+  </main>
+
+  <!-- Ayarlar -->
+  <dialog id="settings">
+    <form method="dialog">
+      <h2>Ayarlar</h2>
+      <label>Çalma cihazı</label>
+      <div id="device-list" class="device-list"><p class="muted">Yükleniyor…</p></div>
+      <button type="button" class="btn ghost small" id="btn-refresh-devices">Cihazları yenile</button>
+
+      <label for="auto-stop">Otomatik durdurma</label>
+      <select id="auto-stop">
+        <option value="0">Kapalı</option>
+        <option value="30">30 saniye</option>
+        <option value="45">45 saniye</option>
+        <option value="60">60 saniye</option>
+      </select>
+
+      <details>
+        <summary>Kendi Spotify uygulamanı kullan</summary>
+        <p class="muted small">Trster'ı kendi grubunla oynamak için Spotify Developer Dashboard'da ücretsiz bir uygulama aç, Redirect URI olarak <code id="redirect-uri"></code> gir ve Client ID'yi buraya yapıştır.</p>
+        <input id="custom-client-id" placeholder="Client ID" autocomplete="off" spellcheck="false">
+      </details>
+
+      <div class="row">
+        <button type="button" class="btn ghost small" id="btn-logout">Çıkış yap</button>
+        <button class="btn primary small" id="btn-close-settings">Kaydet</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="vendor/jsQR.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
