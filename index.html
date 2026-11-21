@@ -12,7 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon-180.png">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <div class="rings" aria-hidden="true">
@@ -38,7 +38,6 @@
     <!-- Hazır -->
     <section class="screen" id="screen-ready" hidden>
       <h1>Hazır!</h1>
-      <p class="muted" id="device-line">Çalma cihazı: otomatik</p>
       <button class="btn primary big" id="btn-scan">Kart tara</button>      <p class="hint">İpucu: Telefonun Spotify uygulamasını bir kez açık bırak, sonra buraya dön.</p>
     </section>
 
@@ -47,6 +46,12 @@
       <div class="cam-wrap">
         <video id="video" playsinline muted></video>
         <div class="cam-frame"></div>
+        <div class="scan-alert" id="scan-alert" hidden>
+          <div class="alert-icon">?</div>
+          <h3>Bu bir Trster kartı değil</h3>
+          <p>Okunan QR kod bir şarkıya gitmiyor. Kartın arka yüzündeki QR kodu tara.</p>
+          <button class="btn primary small" id="btn-rescan" type="button">Tekrar tara</button>
+        </div>
       </div>
       <p class="muted center">Kartın QR kodunu çerçeveye tut</p>
       <button class="btn ghost" id="btn-cancel-scan">Vazgeç</button>
@@ -70,9 +75,10 @@
     </section>
 
     <!-- Hata / cihaz yok -->
-    <section class="screen" id="screen-error" hidden>
+    <section class="screen error-screen" id="screen-error" hidden>
+      <div class="alert-icon big">!</div>
       <h2 id="err-title">Bir sorun oldu</h2>
-      <p class="muted" id="err-text"></p>
+      <p class="muted center" id="err-text"></p>
       <a class="btn ghost" id="btn-open-spotify" href="spotify:" hidden>Spotify'ı aç</a>
       <button class="btn primary" id="btn-retry">Tekrar dene</button>
       <button class="btn ghost" id="btn-back">Geri</button>
@@ -108,8 +114,8 @@
     </form>
   </dialog>
 
-  <script src="config.js?v=4"></script>
-  <script src="vendor/jsQR.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="config.js?v=5"></script>
+  <script src="vendor/jsQR.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>

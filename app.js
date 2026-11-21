@@ -115,11 +115,11 @@
         const i = document.createElement("input"); i.type = "radio"; i.name = "dev"; i.value = id; i.checked = (saved || "") === id;
         i.onchange = () => {
           if (id) { LS.set("deviceId", id); LS.set("deviceName", devName); } else { LS.del("deviceId"); LS.del("deviceName"); }
-          renderDevices(); updateDeviceLine();
+          renderDevices();
           // şarkı çalıyorsa yeni cihaza aktar
           if (!$("screen-playing").hidden && current) {
             const target = id ? ds.find((d) => d.id === id) : pickDevice(ds);
-            if (target) api("PUT", "/me/player", { device_ids: [target.id], play: !pausedAt })
+            if (target) api("PUT", "/me/player", { device_ids: [target.id], play: isPlaying })
               .then(() => { $("play-device").textContent = "🔊 " + target.name; }).catch(() => {});
           }
         };
@@ -130,17 +130,17 @@
     } catch (e) { box.innerHTML = '<p class="muted small">Cihazlar alınamadı.</p>'; }
   }
 
-  function updateDeviceLine() {
-    const n = LS.get("deviceName");
-    $("device-line").textContent = LS.get("deviceId") && n ? "Çalma cihazı: " + n : "Çalma cihazı: otomatik";
-  }
 
   // ---------- çalma ----------
-  let current = null, timerInt = null, startedAt = 0, pausedTotal = 0, pausedAt = 0, autoStopT = null;
+  // Ekrandaki süre ve durum, Spotify'ın gerçek çalma durumundan (GET /me/player) beslenir.
+  let current = null, isPlaying = false, ended = false, timeUp = false;
+  let progressMs = 0, lastSync = 0, tickInt = null, pollInt = null, wakeLock = null, noDevice = false;
 
   async function play(trackId) {
-    current = trackId;
-    $("play-status").textContent = "Başlatılıyor…";
+    current = trackId; noDevice = false;
+    stopLoops();
+    ended = false; timeUp = false; isPlaying = false; progressMs = 0;
+    $("play-status").textContent = "Başlatılıyor…"; $("timer").textContent = "0:00";
     show("playing");
     try {
       const devices = await getDevices();
@@ -148,11 +148,13 @@
       if (!dev) throw Object.assign(new Error(), { reason: "NO_ACTIVE_DEVICE" });
       await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
       $("play-device").textContent = "🔊 " + dev.name;
-      startTimer();
+      isPlaying = true; lastSync = Date.now();
+      startLoops(); setUI();
     } catch (e) {
       if (e.code === "LOGIN") return;
       if (e.reason === "NO_ACTIVE_DEVICE" || e.status === 404) {
-        fail("Spotify bulunamadı", "Telefonundaki Spotify uygulamasını aç (bir şarkıyı başlatıp durdurman yeterli), sonra buraya dönüp Tekrar dene'ye bas.", true);
+        noDevice = true;
+        fail("Spotify kapalı görünüyor", "Aşağıdaki butonla Spotify'ı aç, sonra Trster'a geri dön. Şarkı kendiliğinden başlayacak.", true);
       } else if (e.reason === "PREMIUM_REQUIRED" || e.status === 403) {
         fail("Premium gerekiyor", "Spotify şarkıyı tam çalmak için Premium hesap istiyor. Hesabının Premium olduğundan ve bu uygulamaya izin verilen kullanıcılar arasında olduğundan emin ol.");
       } else {
@@ -161,38 +163,90 @@
     }
   }
 
-  function startTimer() {
-    clearInterval(timerInt); clearTimeout(autoStopT);
-    startedAt = Date.now(); pausedTotal = 0; pausedAt = 0;
-    document.body.classList.remove("paused");
-    $("btn-toggle").textContent = "Duraklat";
-    $("play-status").textContent = "Çalıyor…";
-    const tick = () => {
-      const now = pausedAt || Date.now();
-      const s = Math.floor((now - startedAt - pausedTotal) / 1000);
-      $("timer").textContent = Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
-    };
-    tick(); timerInt = setInterval(tick, 250);
-    const lim = +LS.get("autoStop", 0);
-    if (lim) autoStopT = setTimeout(() => { if (!pausedAt) togglePause(); }, lim * 1000);
+  const fmt = (ms) => { const s = Math.max(0, Math.floor(ms / 1000)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+  const nowProgress = () => progressMs + (isPlaying ? Date.now() - lastSync : 0);
+
+  function setUI() {
+    let status = "Çalıyor…", btn = "Duraklat";
+    if (ended) { status = "Şarkı bitti"; btn = "Baştan çal"; }
+    else if (timeUp) { status = "Süre doldu"; btn = "Devam"; }
+    else if (!isPlaying) { status = "Duraklatıldı"; btn = "Devam"; }
+    $("play-status").textContent = status;
+    $("btn-toggle").textContent = btn;
+    document.body.classList.toggle("paused", !isPlaying);
+    $("timer").textContent = fmt(nowProgress());
+  }
+
+  function startLoops() {
+    tickInt = setInterval(() => {
+      const lim = +LS.get("autoStop", 0);
+      if (lim && isPlaying && !timeUp && nowProgress() >= lim * 1000) {
+        timeUp = true; progressMs = nowProgress(); isPlaying = false;
+        api("PUT", "/me/player/pause").catch(() => {});
+      }
+      setUI();
+    }, 250);
+    pollInt = setInterval(sync, 3000);
+    requestWakeLock();
+  }
+
+  function stopLoops() {
+    clearInterval(tickInt); clearInterval(pollInt); tickInt = pollInt = null;
+    releaseWakeLock();
+  }
+
+  // Spotify'daki gerçek durumu oku: dışarıdan duraklatma, şarkının bitmesi, başka şarkıya geçme
+  async function sync() {
+    if (document.hidden || $("screen-playing").hidden || !current || ended) return;
+    let st;
+    try { st = await api("GET", "/me/player"); } catch { return; }
+    if (!st || !st.item) { if (isPlaying) { progressMs = nowProgress(); isPlaying = false; } return setUI(); }
+    if (st.item.id !== current) {
+      // şarkı bitti ve Spotify kendi önerisine geçti: durdur
+      ended = true; isPlaying = false; progressMs = st.item.duration_ms || progressMs;
+      api("PUT", "/me/player/pause").catch(() => {});
+      return setUI();
+    }
+    const prev = nowProgress();
+    if (!st.is_playing && st.progress_ms === 0 && prev > 5000) { ended = true; isPlaying = false; return setUI(); }
+    if (timeUp && st.is_playing) timeUp = false;
+    isPlaying = st.is_playing; progressMs = st.progress_ms; lastSync = Date.now();
+    setUI();
   }
 
   async function togglePause() {
     try {
-      if (!pausedAt) {
-        await api("PUT", "/me/player/pause"); pausedAt = Date.now();
-        document.body.classList.add("paused"); $("btn-toggle").textContent = "Devam"; $("play-status").textContent = "Duraklatıldı";
+      if (ended) return play(current);
+      if (isPlaying) {
+        progressMs = nowProgress(); isPlaying = false; setUI();
+        await api("PUT", "/me/player/pause");
       } else {
-        await api("PUT", "/me/player/play"); pausedTotal += Date.now() - pausedAt; pausedAt = 0;
-        document.body.classList.remove("paused"); $("btn-toggle").textContent = "Duraklat"; $("play-status").textContent = "Çalıyor…";
+        timeUp = false; isPlaying = true; lastSync = Date.now(); setUI();
+        await api("PUT", "/me/player/play");
       }
-    } catch (e) { /* önemsiz */ }
+    } catch (e) { sync(); }
   }
 
+  // Sayfa kapanırken / arka plana geçerken çalmayı durdur (sayfa kapansa da istek gitsin diye keepalive)
+  function pauseOnLeave() {
+    if ($("screen-playing").hidden || !isPlaying) return;
+    const t = LS.get("token");
+    if (!t || Date.now() >= t.exp) return;
+    progressMs = nowProgress(); isPlaying = false;
+    try { fetch(API + "/me/player/pause", { method: "PUT", keepalive: true, headers: { Authorization: "Bearer " + t.access } }); } catch {}
+    setUI();
+  }
+
+  async function requestWakeLock() {
+    try { if ("wakeLock" in navigator && !wakeLock) { wakeLock = await navigator.wakeLock.request("screen"); wakeLock.addEventListener("release", () => (wakeLock = null)); } } catch {}
+  }
+  function releaseWakeLock() { try { wakeLock && wakeLock.release(); } catch {} wakeLock = null; }
+
   async function next() {
-    clearInterval(timerInt); clearTimeout(autoStopT);
+    stopLoops();
     if (mode === "cardless") return playRandom();
-    if (!pausedAt) api("PUT", "/me/player/pause").catch(() => {});
+    if (isPlaying) api("PUT", "/me/player/pause").catch(() => {});
+    isPlaying = false;
     startScan();
   }
 
@@ -202,7 +256,7 @@
 
   async function loadDeck() {
     if (deck) return deck;
-    const r = await fetch("songs.json?v=" + (window.TRSTER_VERSION || ""));
+    const r = await fetch("songs.json?v=" + (window.TRSTER_VERSION || "5"));
     deck = (await r.json()).filter((s) => /^[A-Za-z0-9]{22}$/.test(s.spotify_id));
     return deck;
   }
@@ -259,13 +313,14 @@
 
   async function toggleMode() {
     stopScan();
-    clearInterval(timerInt); clearTimeout(autoStopT);
+    stopLoops();
     if (mode === "cards") {
       if (!(await accessToken())) return show("login");
       setMode("cardless");
       playRandom();
     } else {
-      if (!$("screen-playing").hidden && !pausedAt) api("PUT", "/me/player/pause").catch(() => {});
+      if (!$("screen-playing").hidden && isPlaying) api("PUT", "/me/player/pause").catch(() => {});
+      isPlaying = false;
       setMode("cards");
       show(LS.get("token") ? "ready" : "login");
     }
@@ -282,7 +337,7 @@
     return m ? m[1] : null;
   }
 
-  let stream = null, scanning = false;
+  let stream = null, scanning = false, paused = false;
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
 
@@ -296,9 +351,10 @@
     }
     video.srcObject = stream; await video.play().catch(() => {});
     scanning = true;
+    paused = false; $("scan-alert").hidden = true;
     const loop = () => {
       if (!scanning) return;
-      if (video.readyState >= 2) {
+      if (!paused && video.readyState >= 2) {
         const w = video.videoWidth, h = video.videoHeight, s = Math.min(w, h);
         const size = Math.min(640, s);
         canvas.width = canvas.height = size;
@@ -307,6 +363,10 @@
         const code = jsQR(img.data, size, size, { inversionAttempts: "attemptBoth" });
         const id = code && parseTrackId(code.data);
         if (id) { stopScan(); if (navigator.vibrate) navigator.vibrate(60); play(id); return; }
+        if (code && code.data) {            // QR okundu ama bizim kart değil
+          paused = true; $("scan-alert").hidden = false;
+          if (navigator.vibrate) navigator.vibrate([40, 60, 40]);
+        }
       }
       requestAnimationFrame(loop);
     };
@@ -324,6 +384,8 @@
     stopScan();
     $("err-title").textContent = title; $("err-text").textContent = text;
     $("btn-open-spotify").hidden = !spotifyBtn;
+    $("btn-open-spotify").className = "btn " + (spotifyBtn ? "primary" : "ghost");
+    $("btn-retry").className = "btn " + (spotifyBtn ? "ghost" : "primary");
     $("btn-retry").hidden = !current;
     retryFn = current ? () => play(current) : null;
     show("error");
@@ -358,11 +420,12 @@
     $("btn-settings").onclick = openSettings;
     $("play-device").onclick = openSettings;
     $("btn-mode").onclick = toggleMode;
+    $("btn-rescan").onclick = () => { $("scan-alert").hidden = true; paused = false; };
     $("btn-reveal").onclick = showCard;
     $("btn-close-settings").onclick = saveSettings;
     $("btn-refresh-devices").onclick = renderDevices;
     $("btn-logout").onclick = () => { LS.del("token"); $("settings").close(); show("login"); };
-    updateDeviceLine();
+   
 
     const params = new URLSearchParams(location.search);
     // Kart normal kamerayla tarandıysa (?t=...) şarkıyı girişten sonra da hatırla
@@ -383,6 +446,16 @@
     show("ready");
   }
 
-  document.addEventListener("visibilitychange", () => { if (document.hidden && scanning) { stopScan(); show("ready"); } });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (scanning) { stopScan(); show("ready"); }
+      pauseOnLeave();
+    } else {
+      // Spotify açılıp geri dönüldüyse şarkıyı kendiliğinden başlat
+      if (noDevice && !$("screen-error").hidden && current) return play(current);
+      if (!$("screen-playing").hidden) { requestWakeLock(); sync(); }
+    }
+  });
+  window.addEventListener("pagehide", pauseOnLeave);
   init();
 })();
