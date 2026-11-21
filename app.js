@@ -96,8 +96,10 @@
 
   function pickDevice(devices) {
     const saved = LS.get("deviceId");
-    return devices.find((d) => d.id === saved) || devices.find((d) => d.is_active) ||
-      devices.find((d) => d.type === "Smartphone") || devices[0];
+    const phones = devices.filter((d) => d.type === "Smartphone");
+    return devices.find((d) => d.id === saved) ||
+      phones.find((d) => d.is_active) || phones[0] ||
+      devices.find((d) => d.is_active) || devices[0];
   }
 
   async function renderDevices() {
@@ -114,6 +116,12 @@
         i.onchange = () => {
           if (id) { LS.set("deviceId", id); LS.set("deviceName", devName); } else { LS.del("deviceId"); LS.del("deviceName"); }
           renderDevices(); updateDeviceLine();
+          // şarkı çalıyorsa yeni cihaza aktar
+          if (!$("screen-playing").hidden && current) {
+            const target = id ? ds.find((d) => d.id === id) : pickDevice(ds);
+            if (target) api("PUT", "/me/player", { device_ids: [target.id], play: !pausedAt })
+              .then(() => { $("play-device").textContent = "🔊 " + target.name; }).catch(() => {});
+          }
         };
         l.append(i, document.createTextNode(label)); box.append(l);
       };
@@ -139,6 +147,7 @@
       const dev = pickDevice(devices);
       if (!dev) throw Object.assign(new Error(), { reason: "NO_ACTIVE_DEVICE" });
       await api("PUT", "/me/player/play?device_id=" + encodeURIComponent(dev.id), { uris: ["spotify:track:" + trackId] });
+      $("play-device").textContent = "🔊 " + dev.name;
       startTimer();
     } catch (e) {
       if (e.code === "LOGIN") return;
@@ -271,6 +280,7 @@
     $("btn-retry").onclick = () => retryFn && retryFn();
     $("btn-back").onclick = () => show(LS.get("token") ? "ready" : "login");
     $("btn-settings").onclick = openSettings;
+    $("play-device").onclick = openSettings;
     $("btn-close-settings").onclick = saveSettings;
     $("btn-refresh-devices").onclick = renderDevices;
     $("btn-logout").onclick = () => { LS.del("token"); $("settings").close(); show("login"); };
