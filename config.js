@@ -3,5 +3,5 @@
 // Kendi kopyanı kuruyorsan burayı kendi Client ID'nle değiştir
 // (ya da uygulamadaki Ayarlar ekranından kendi ID'ni gir).
 window.TRSTER_CONFIG = {
-  CLIENT_ID: "BURAYA_CLIENT_ID",
+  CLIENT_ID: "ee78e40105fa4c198c4a13c9cf412f00",
 };
