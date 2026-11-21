@@ -447,6 +447,7 @@
   // ---------- ayarlar ----------
   function openSettings() {
     $("redirect-uri").textContent = REDIRECT_URI;
+    $("app-version").textContent = "Trster v" + (window.TRSTER_VERSION || "?");
     $("custom-client-id").value = LS.get("clientId") || "";
     $("auto-stop").value = String(LS.get("autoStop", 0));
     $("settings").showModal();
