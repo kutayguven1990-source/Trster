@@ -191,8 +191,84 @@
 
   async function next() {
     clearInterval(timerInt); clearTimeout(autoStopT);
+    if (mode === "cardless") return playRandom();
     if (!pausedAt) api("PUT", "/me/player/pause").catch(() => {});
     startScan();
+  }
+
+  // ---------- kartsız oyun ----------
+  // Sadece bizim destemizdeki (songs.json) şarkılar çalar; aynı oturumda tekrar etmez.
+  let mode = "cards", deck = null, queue = [], currentSong = null;
+
+  async function loadDeck() {
+    if (deck) return deck;
+    const r = await fetch("songs.json?v=" + (window.TRSTER_VERSION || ""));
+    deck = (await r.json()).filter((s) => /^[A-Za-z0-9]{22}$/.test(s.spotify_id));
+    return deck;
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+
+  async function playRandom() {
+    try { await loadDeck(); } catch { return fail("Şarkı listesi yüklenemedi", "İnternet bağlantını kontrol edip tekrar dene."); }
+    if (!queue.length) queue = shuffle(deck.slice());
+    currentSong = queue.pop();
+    hideCard();
+    play(currentSong.spotify_id);
+  }
+
+  // basılan kartın renk skalasıyla aynı: eski = mor ... yeni = mavi
+  const STOPS = [[1965, "#6A2C91"], [1975, "#D6246E"], [1985, "#E8503A"], [1993, "#F4A23A"],
+    [2000, "#F2C14E"], [2010, "#5BC0BE"], [2018, "#3FA7D6"], [2026, "#2F6FD1"]];
+  const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  function yearColor(y) {
+    y = Math.max(STOPS[0][0], Math.min(STOPS[STOPS.length - 1][0], y));
+    for (let i = 0; i < STOPS.length - 1; i++) {
+      const [y0, c0] = STOPS[i], [y1, c1] = STOPS[i + 1];
+      if (y >= y0 && y <= y1) { const t = (y - y0) / (y1 - y0), a = hex(c0), b = hex(c1); return a.map((v, k) => Math.round(v + (b[k] - v) * t)); }
+    }
+  }
+
+  function showCard() {
+    if (!currentSong) return;
+    const [r, g, b] = yearColor(+currentSong.year);
+    const card = $("song-card");
+    card.style.background = `linear-gradient(180deg, rgb(${r + 20 > 255 ? 255 : r + 20},${g + 20 > 255 ? 255 : g + 20},${b + 20 > 255 ? 255 : b + 20}), rgb(${r * .88 | 0},${g * .88 | 0},${b * .88 | 0}))`;
+    $("sc-artist").textContent = currentSong.artist;
+    $("sc-year").textContent = currentSong.year;
+    $("sc-title").textContent = currentSong.title;
+    card.hidden = false; $("pulse").hidden = true; $("btn-reveal").hidden = true;
+  }
+
+  function hideCard() {
+    $("song-card").hidden = true; $("pulse").hidden = false;
+    $("btn-reveal").hidden = mode !== "cardless";
+  }
+
+  function setMode(m) {
+    mode = m;
+    const on = m === "cardless";
+    $("btn-mode").textContent = on ? "Kartlı Oyun" : "Kartsız Oyun";
+    $("btn-mode").classList.toggle("on", on);
+    $("btn-next").textContent = on ? "Sonraki şarkı" : "Sonraki kart";
+    hideCard();
+  }
+
+  async function toggleMode() {
+    stopScan();
+    clearInterval(timerInt); clearTimeout(autoStopT);
+    if (mode === "cards") {
+      if (!(await accessToken())) return show("login");
+      setMode("cardless");
+      playRandom();
+    } else {
+      if (!$("screen-playing").hidden && !pausedAt) api("PUT", "/me/player/pause").catch(() => {});
+      setMode("cards");
+      show(LS.get("token") ? "ready" : "login");
+    }
   }
 
   // ---------- QR ----------
@@ -281,6 +357,8 @@
     $("btn-back").onclick = () => show(LS.get("token") ? "ready" : "login");
     $("btn-settings").onclick = openSettings;
     $("play-device").onclick = openSettings;
+    $("btn-mode").onclick = toggleMode;
+    $("btn-reveal").onclick = showCard;
     $("btn-close-settings").onclick = saveSettings;
     $("btn-refresh-devices").onclick = renderDevices;
     $("btn-logout").onclick = () => { LS.del("token"); $("settings").close(); show("login"); };

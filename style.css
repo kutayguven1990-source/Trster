@@ -67,6 +67,21 @@ body.playing .rings i { animation-duration: 4s !important; }
 body.paused .pulse { animation: none; opacity: .6; }
 @keyframes pulse { 50% { transform: scale(1.08); } }
 
+.top-actions { display: flex; align-items: center; gap: 6px; }
+.pill-btn { background: rgba(255,255,255,.1); color: var(--fg); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; }
+.pill-btn.on { background: linear-gradient(90deg, var(--pink), var(--purple)); border-color: transparent; }
+.btn.reveal { background: transparent; border: 2px solid var(--yellow); color: var(--yellow); }
+
+/* kartsız oyun: ekrandaki şarkı kartı (basılan kartın ön yüzüyle aynı) */
+.song-card { width: min(280px, 78vw); aspect-ratio: 1; margin: 0 auto; border-radius: 14px; color: #141419;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;
+  padding: 26px 18px; box-shadow: 0 14px 40px rgba(0,0,0,.5); animation: flip .45s ease-out; }
+.song-card[hidden] { display: none; }
+.sc-artist { font-weight: 700; font-size: 17px; line-height: 1.2; }
+.sc-year { font-weight: 900; font-size: 72px; letter-spacing: -2px; line-height: 1; }
+.sc-title { font-style: italic; font-weight: 600; font-size: 17px; line-height: 1.2; }
+@keyframes flip { from { transform: rotateY(90deg); opacity: .3; } to { transform: none; opacity: 1; } }
+
 .device-chip { align-self: center; background: rgba(255,255,255,.08); color: var(--muted); border: 0; border-radius: 999px; padding: 8px 14px; font-size: 14px; font-family: inherit; cursor: pointer; }
 
 /* ayarlar */
@@ -84,3 +99,4 @@ code { word-break: break-all; color: var(--yellow); }
 .device { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #0f0f15; border: 1px solid #2c2c38; cursor: pointer; }
 .device.active { border-color: var(--pink); }
 .device input { width: auto; }
+.pulse[hidden] { display: none; }

@@ -5,3 +5,4 @@
 window.TRSTER_CONFIG = {
   CLIENT_ID: "ee78e40105fa4c198c4a13c9cf412f00",
 };
+window.TRSTER_VERSION = "4";
